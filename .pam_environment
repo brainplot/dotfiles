@@ -1,0 +1,33 @@
+# GPG Agent configuration
+SSH_AGENT_PID                   DEFAULT=
+SSH_AUTH_SOCK                   DEFAULT=${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh
+
+# NodeJS path for global packages (i.e. those installed with `-g`)
+npm_config_prefix               DEFAULT=@{HOME}/.node_modules
+PATH                            DEFAULT=${npm_config_prefix}/bin:${PATH}
+
+# Set cargo and rustup locations
+RUST_HOME						DEFAULT=@{HOME}/.local/opt/rust
+CARGO_HOME                      DEFAULT=${RUST_HOME}/cargo
+RUSTUP_HOME                     DEFAULT=${RUST_HOME}/rustup
+RUST_TOOLCHAIN                  DEFAULT=stable-x86_64-unknown-linux-gnu
+PATH                            DEFAULT=${CARGO_HOME}/bin:${PATH}
+LD_LIBRARY_PATH                 DEFAULT=${RUSTUP_HOME}/toolchains/${RUST_TOOLCHAIN}/lib
+
+# Use KDE file picker in GTK apps
+GTK_USE_PORTAL                  DEFAULT=1
+
+# Set the default number of jobs used by `cmake --build` and `ctest`
+CMAKE_BUILD_PARALLEL_LEVEL      DEFAULT=6
+CTEST_PARALLEL_LEVEL            DEFAULT=${CMAKE_BUILD_PARALLEL_LEVEL}
+
+# Enable trash support in KDE for Electron apps
+ELECTRON_TRASH                  DEFAULT=kioclient5
+
+# Set the root of the Android SDK for proper detection in Android Studio
+ANDROID_SDK_ROOT                DEFAULT=@{HOME}/Android/Sdk
+PATH							DEFAULT=${ANDROID_SDK_ROOT}/platform-tools:${PATH}
+
+# Set user-wide paths to binaries and dynamically-linked libraries
+PATH                            DEFAULT=@{HOME}/.local/bin:${PATH}
+LD_LIBRARY_PATH                 DEFAULT=@{HOME}/.local/lib:${LD_LIBRARY_PATH}
