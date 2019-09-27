@@ -1,0 +1,11 @@
+[Basic Settings]
+Indexing-Enabled=false
+
+[General]
+dbVersion=2
+exclude filters=*.la,*.vbox*,CMakeTmpQmake,*.so,.yarn-cache,*.moc,.hg,*.map,*.orig,__pycache__,*.vhdx,*.qmlc,.yarn,*.swap,*.qcow2,.moc,Makefile.am,*.gb,*.jsc,cmake_install.cmake,confdefs.h,*.vdi,*.aux,.npm,ui_*.h,*.init,*.ini,*.part,*.pc,*.pyc,CMakeFiles,*.img,*.fna,.xsession-errors*,CTestTestfile.cmake,*.tmp,qrc_*.cpp,*.faa,*.rej,*.lo,*.m4,litmain.sh,node_modules,*.vhd,*.csproj,lzo,.git,.histfile.*,CMakeCache.txt,_darcs,*.vmdk,.svn,*.rcore,*~,vbox.log,*.gbff,*.qrc,*.vm*,autom4te,*.fq,*.omf,*.sql,confstat,.pch,moc_*.cpp,.obj,*.po,CMakeTmp,*.sql.gz,*.class,*.db,*.gmo,*.pyo,.uic,*.gcode,CVS,*.fasta,*.loT,*.nvram,*.fastq,po,libtool,*.o,*.a,node_packages,*.elc,config.status,conftest,.bzr,lost+found,core-dumps,nbproject
+exclude filters version=5
+exclude folders[$e]=$ANDROID_SDK_ROOT/,$HOME/.android/,$HOME/.cache/,$HOME/.CLion*/,$HOME/.gradle/,$HOME/.IdeaIC*/,$HOME/.thunderbird/,$HOME/.AndroidStudio*/
+first run=false
+folders[$e]=$HOME/
+only basic indexing=true
