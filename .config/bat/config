@@ -1,0 +1,8 @@
+# Set the theme to "1337"
+--theme=1337
+
+# Use italic text on the terminal (not supported on all terminals)
+--italic-text=always
+
+# Use C++ syntax (instead of C) for .h header files
+--map-syntax h:cpp
