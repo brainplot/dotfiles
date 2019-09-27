@@ -1,0 +1,3 @@
+[submodule ".gdb/qt5printers"]
+	path = .gdb/qt5printers
+	url = https://github.com/Lekensteyn/qt5printers.git
