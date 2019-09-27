@@ -1,0 +1,25 @@
+[user]
+	name = Gianluca Recchia
+	email = gianluca.recchia97@gmail.com
+	signingkey = 3C2B4128D9A1F218
+[commit]
+	gpgsign = true
+[core]
+	autocrlf = input
+	excludesfile = ~/.gitignore
+	editor = vim
+[diff]
+	tool = meld
+[merge]
+	tool = meld
+[mergetool]
+	keepBackup = false
+[alias]
+	ignore = "!gi() { curl -sLw '\n' 'https://www.gitignore.io/api/'$(echo $@ | tr -s '[:blank:]' ',') ;}; gi"
+	tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[url "git@github.com"]
+	insteadOf = gh
+	pushInsteadOf = gh
+[url "git@gitlab.com"]
+	insteadOf = gl
+	pushInsteadOf = gl
