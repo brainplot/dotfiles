@@ -1,0 +1,10 @@
+[build]
+rustflags = [
+    "-C", "prefer-dynamic",
+    "-C", "target-cpu=native"
+    # "-C", "lto=<value>"
+]
+
+[alias]
+rr = "run --release"
+tr = "test --release"
