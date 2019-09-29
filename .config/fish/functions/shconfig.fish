@@ -1,3 +1,3 @@
-function shconfig --description "Edit config.fish in $VISUAL"
-	$VISUAL ~/.config/fish/config.fish $argv
+function shconfig --description "Edit config.fish in Sublime Text"
+	subl $argv ~/.config/fish/config.fish 
 end
