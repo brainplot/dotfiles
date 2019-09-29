@@ -4,6 +4,7 @@
 	signingkey = 3C2B4128D9A1F218
 [commit]
 	gpgsign = true
+	verbose = true
 [core]
 	autocrlf = input
 	excludesfile = ~/.gitignore
