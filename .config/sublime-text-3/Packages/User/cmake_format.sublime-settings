@@ -1,3 +1,5 @@
 {
-	"binary": "cmake-format"
+	"binary": "cmake-format",
+	"format_on_save": true,
+	"style": "file"
 }
