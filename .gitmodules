@@ -1,6 +1,3 @@
 [submodule ".gdb/qt5printers"]
 	path = .gdb/qt5printers
 	url = https://github.com/Lekensteyn/qt5printers.git
-[submodule ".config/fish/fisher"]
-	path = .config/fish/fisher
-	url = https://github.com/jorgebucaran/fisher.git
