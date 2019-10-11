@@ -14,6 +14,10 @@ RUST_TOOLCHAIN                  DEFAULT=stable-x86_64-unknown-linux-gnu
 PATH                            DEFAULT=${CARGO_HOME}/bin:${PATH}
 LD_LIBRARY_PATH                 DEFAULT=${RUSTUP_HOME}/toolchains/${RUST_TOOLCHAIN}/lib
 
+# Set up composer installation
+COMPOSER_HOME                   DEFAULT=@{HOME}/.local/opt/composer
+PATH                            DEFAULT=${COMPOSER_HOME}/vendor/bin:${PATH}
+
 # Use KDE file picker in GTK apps
 GTK_USE_PORTAL                  DEFAULT=1
 
