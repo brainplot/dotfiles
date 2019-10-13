@@ -71,5 +71,6 @@
 		"editor.findMatchBorder": "#00BCD4",
 		"selection.background": "#00BCD440"
 	},
-	"materialTheme.accent": "Cyan"
+	"materialTheme.accent": "Cyan",
+	"window.titleBarStyle": "custom"
 }
