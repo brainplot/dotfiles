@@ -21,6 +21,10 @@ PATH                            DEFAULT=${COMPOSER_HOME}/vendor/bin:${PATH}
 # Use KDE file picker in GTK apps
 GTK_USE_PORTAL                  DEFAULT=1
 
+# Set the default number of jobs used by `cmake --build` and `ctest`
+CMAKE_BUILD_PARALLEL_LEVEL      DEFAULT=8
+CTEST_PARALLEL_LEVEL            DEFAULT=${CMAKE_BUILD_PARALLEL_LEVEL}
+
 # Enable trash support in KDE for Electron apps
 ELECTRON_TRASH                  DEFAULT=kioclient5
 
