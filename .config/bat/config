@@ -1,5 +1,5 @@
-# Set the theme to "1337"
---theme=base16
+# Set the theme
+--theme=TwoDark
 
 # Use italic text on the terminal (not supported on all terminals)
 --italic-text=always
