@@ -1,1 +1,4 @@
-C++.sublime-settings
+{
+	"rulers": [ 120 ],
+	"tab_size": 2
+}
