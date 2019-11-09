@@ -9,6 +9,7 @@
 	autocrlf = input
 	excludesfile = ~/.gitignore
 	editor = vim
+	pager = less -x1,5
 [diff]
 	tool = meld
 [merge]
