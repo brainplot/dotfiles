@@ -1,7 +1,3 @@
-# GPG Agent configuration
-SSH_AGENT_PID                   DEFAULT=
-SSH_AUTH_SOCK                   DEFAULT=${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh
-
 # NodeJS path for global packages (i.e. those installed with `-g`)
 npm_config_prefix               DEFAULT=@{HOME}/.node_modules
 PATH                            DEFAULT=${npm_config_prefix}/bin:${PATH}
