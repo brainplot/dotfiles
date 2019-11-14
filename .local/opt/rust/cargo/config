@@ -1,8 +1,7 @@
 [build]
 rustflags = [
-    "-C", "prefer-dynamic",
-    "-C", "target-cpu=native"
-    # "-C", "lto=<value>"
+    "-C", "target-cpu=native",
+    "-C", "lto=thin"
 ]
 
 [alias]
