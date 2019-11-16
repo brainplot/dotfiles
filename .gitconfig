@@ -19,7 +19,7 @@
 [alias]
 	ignore = "!gi() { curl -sLw '\n' 'https://www.gitignore.io/api/'$(echo $@ | tr -s '[:blank:]' ',') ;}; gi"
 	tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	pristine = !git clean -fdx && git reset --hard
+	pristine = !git reset --hard && git clean -fdx
 [url "git@github.com"]
 	insteadOf = gh
 	pushInsteadOf = gh
