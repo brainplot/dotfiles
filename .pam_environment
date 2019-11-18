@@ -31,3 +31,8 @@ PATH                            DEFAULT=${ANDROID_SDK_ROOT}/platform-tools:${PAT
 # Set user-wide paths to binaries and dynamically-linked libraries
 PATH                            DEFAULT=@{HOME}/.local/bin:${PATH}
 LD_LIBRARY_PATH                 DEFAULT=@{HOME}/.local/lib:${LD_LIBRARY_PATH}
+
+# System's editors
+ALTERNATE_EDITOR                DEFAULT=nvim
+EDITOR                          DEFAULT="emacsclient -t"
+VISUAL                          DEFAULT="emacsclient -c"
