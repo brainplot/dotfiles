@@ -4,6 +4,7 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'rakr/vim-one'
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-sensible'
 call plug#end()
 
