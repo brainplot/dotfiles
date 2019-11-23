@@ -1,5 +1,14 @@
 {
 	"auto_show_diagnostics_panel_level": 2,
 	"show_diagnostics_count_in_view_status": true,
-	"log_stderr": true
+	"log_stderr": true,
+	"clients": {
+		"rls":
+		{
+			"command": ["rls"],
+			"scopes": ["source.rust"],
+			"syntaxes": ["Packages/Rust/Rust.sublime-syntax", "Packages/Rust Enhanced/RustEnhanced.sublime-syntax"],
+			"languageId": "rust"
+		}
+	}
 }
