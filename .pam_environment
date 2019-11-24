@@ -2,13 +2,8 @@
 npm_config_prefix               DEFAULT=@{HOME}/.node_modules
 PATH                            DEFAULT=${npm_config_prefix}/bin:${PATH}
 
-# Set cargo and rustup locations
-RUST_HOME                       DEFAULT=@{HOME}/.local/opt/rust
-CARGO_HOME                      DEFAULT=${RUST_HOME}/cargo
-RUSTUP_HOME                     DEFAULT=${RUST_HOME}/rustup
-RUST_TOOLCHAIN                  DEFAULT=stable-x86_64-unknown-linux-gnu
-PATH                            DEFAULT=${CARGO_HOME}/bin:${PATH}
-LD_LIBRARY_PATH                 DEFAULT=${RUSTUP_HOME}/toolchains/${RUST_TOOLCHAIN}/lib
+# Set cargo location
+CARGO_HOME                      DEFAULT=@{HOME}/.local/opt/cargo
 
 # Set up composer installation
 COMPOSER_HOME                   DEFAULT=@{HOME}/.local/opt/composer
@@ -30,7 +25,6 @@ PATH                            DEFAULT=${ANDROID_SDK_ROOT}/platform-tools:${PAT
 
 # Set user-wide paths to binaries and dynamically-linked libraries
 PATH                            DEFAULT=@{HOME}/.local/bin:${PATH}
-LD_LIBRARY_PATH                 DEFAULT=@{HOME}/.local/lib:${LD_LIBRARY_PATH}
 
 # System's editors
 ALTERNATE_EDITOR                DEFAULT=nvim
