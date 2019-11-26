@@ -9,6 +9,35 @@
 			"scopes": ["source.rust"],
 			"syntaxes": ["Packages/Rust/Rust.sublime-syntax", "Packages/Rust Enhanced/RustEnhanced.sublime-syntax"],
 			"languageId": "rust"
+		},
+		"clangd":
+		{
+			"command": [
+				"clangd",
+				"--background-index",
+				"--compile-commands-dir=build",
+				"--header-insertion=iwyu",
+				"--pch-storage=memory",
+				"-j=6"
+			],
+			"languages": [{
+				"scopes": ["source.c"],
+				"syntaxes": ["Packages/C++/C.sublime-syntax"],
+				"languageId": "c"
+			},{
+				"scopes": ["source.c++"],
+				"syntaxes": ["Packages/C++/C++.sublime-syntax"],
+				"languageId": "cpp"
+			},{
+				"scopes": ["source.objc"],
+				"syntaxes": ["Packages/Objective-C/Objective-C.sublime-syntax"],
+				"languageId": "objective-c"
+			},{
+				"scopes": ["source.objc++"],
+				"syntaxes": ["Packages/Objective-C/Objective-C++.sublime-syntax"],
+				"languageId": "objective-cpp"
+			},
+		]
 		}
 	}
 }
