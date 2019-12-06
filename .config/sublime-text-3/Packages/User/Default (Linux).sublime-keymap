@@ -1,5 +1,7 @@
 [
 	{ "keys": ["ctrl+alt+m"], "command": "toggle_menu" },
 	{ "keys": ["ctrl+shift+o"], "command": "prompt_open_folder" },
-	{ "keys": ["ctrl+shift+c"], "command": "clang_format", "context": [ {"key": "selector", "operator": "equal", "operand": "source.c,source.c++"} ] }
+	{ "keys": ["ctrl+shift+c"], "command": "clang_format", "context": [ {"key": "selector", "operator": "equal", "operand": "source.c,source.c++"} ] },
+	{ "keys": ["ctrl+shift+alt+["], "command": "fold_all" },
+	{ "keys": ["ctrl+shift+alt+]"], "command": "unfold_all" }
 ]
