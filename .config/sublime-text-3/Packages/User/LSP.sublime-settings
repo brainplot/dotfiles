@@ -16,7 +16,7 @@
 				"clangd",
 				"--background-index",
 				"--compile-commands-dir=build",
-				"--header-insertion=iwyu",
+				"--header-insertion=never",
 				"--pch-storage=memory",
 				"-j=6"
 			],
