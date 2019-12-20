@@ -1,4 +1,4 @@
-function update_gpg_tty --description 'Update current tty for the gpg agent'
+function update_gpg_tty -d 'Update current tty for the gpg agent'
 	# Set the pseudo-tty for the gpg-agent
 	set -x GPG_TTY (tty)
 
