@@ -27,6 +27,6 @@ PATH                            DEFAULT=${ANDROID_SDK_ROOT}/platform-tools:${PAT
 PATH                            DEFAULT=@{HOME}/.local/bin:${PATH}
 
 # System's editors
-ALTERNATE_EDITOR                DEFAULT=nvim
+ALTERNATE_EDITOR                DEFAULT=emacs
 EDITOR                          DEFAULT="emacsclient -t"
 VISUAL                          DEFAULT="emacsclient -c"
