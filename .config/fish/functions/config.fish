@@ -1,3 +1,3 @@
 function config -w git -d 'Manage dotfiles'
-	git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $argv;
+	git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $argv
 end
