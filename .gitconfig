@@ -25,6 +25,10 @@
 	s = status
 	ps = push
 	pl = pull
+	dc = diff --cached
+	l = log
+	rs = restore
+	rss = restore --staged
 [url "git@github.com"]
 	insteadOf = gh
 	pushInsteadOf = gh
