@@ -29,6 +29,11 @@
 	l = log
 	rs = restore
 	rss = restore --staged
+	sh = show
+	can = commit --amend --no-edit
+	rb = rebase
+	rbc = rebase --continue
+	rba = rebase --abort
 [url "git@github.com"]
 	insteadOf = gh
 	pushInsteadOf = gh
