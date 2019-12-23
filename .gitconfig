@@ -35,6 +35,7 @@
 	rbc = rebase --continue
 	rba = rebase --abort
 	rl = reflog
+	ca = commit --amend
 [url "git@github.com"]
 	insteadOf = gh
 	pushInsteadOf = gh
