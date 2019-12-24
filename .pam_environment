@@ -4,6 +4,7 @@ PATH                            DEFAULT=${npm_config_prefix}/bin:${PATH}
 
 # Set cargo location
 CARGO_HOME                      DEFAULT=@{HOME}/.local/opt/cargo
+PATH                            DEFAULT=${CARGO_HOME}/bin:${PATH}
 
 # Set up composer installation
 COMPOSER_HOME                   DEFAULT=@{HOME}/.local/opt/composer
