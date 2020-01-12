@@ -24,4 +24,4 @@ shopt -s autocd
 shopt -s checkwinsize
 
 # Prompt customization
-[[ -f ~/.bash-powerline.sh ]] && . ~/.bash-powerline.sh || PS1='[\u@\h \W]\$ '
+PS1='[\u@\h \W]\$ '
