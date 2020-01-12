@@ -18,10 +18,6 @@ export GPG_TTY=$(tty)
 # (Needs to be executed every time a new terminal is launched)
 gpg-connect-agent updatestartuptty /bye >/dev/null
 
-# Set a sensible value for EDITOR and VISUAL
-export EDITOR=$([[ -v DISPLAY ]] && echo vim || echo nano)
-export VISUAL=$([[ -v DISPLAY ]] && echo 'subl -w' || echo "$EDITOR")
-
 # Automatically cd into directories, even if not prepended by cd
 shopt -s autocd
 # Check the window size after every command so that text wraps properly
