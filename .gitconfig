@@ -38,7 +38,5 @@
 	ca = commit --amend
 [url "git@github.com"]
 	insteadOf = gh
-	pushInsteadOf = gh
 [url "git@gitlab.com"]
 	insteadOf = gl
-	pushInsteadOf = gl
