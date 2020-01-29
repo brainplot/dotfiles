@@ -1,3 +1,5 @@
+# -*- indent-tabs-mode: nil -*-
+
 # NodeJS path for global packages (i.e. those installed with `-g`)
 npm_config_prefix               DEFAULT=@{HOME}/.node_modules
 PATH                            DEFAULT=${npm_config_prefix}/bin:${PATH}
