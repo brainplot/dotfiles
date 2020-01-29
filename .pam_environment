@@ -32,4 +32,4 @@ PATH                            DEFAULT=@{HOME}/.local/bin:${PATH}
 # System's editors
 ALTERNATE_EDITOR                DEFAULT=emacs
 EDITOR                          DEFAULT=nano
-VISUAL                          DEFAULT="emacsclient -c"
+VISUAL                          DEFAULT="emacsclient -cn"
