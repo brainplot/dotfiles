@@ -4,7 +4,7 @@
 	"editor.copyWithSyntaxHighlighting": false,
 	"editor.cursorBlinking": "phase",
 	"editor.fontFamily": "Hack, monospace",
-	"editor.fontSize": 16,
+	"editor.fontSize": 17,
 	"editor.formatOnSave": true,
 	"editor.suggestSelection": "first",
 	"editor.hideCursorInOverviewRuler": true,
@@ -32,5 +32,5 @@
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.enableExperiments": false,
 	"workbench.settings.enableNaturalLanguageSearch": false,
-	"workbench.startupEditor": "welcomePageInEmptyWorkbench"
+	"workbench.startupEditor": "none"
 }
