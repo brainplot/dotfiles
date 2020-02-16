@@ -9,12 +9,6 @@
 	autocrlf = input
 	excludesfile = ~/.gitignore
 	pager = less -x1,5
-[diff]
-	tool = meld
-[merge]
-	tool = meld
-[mergetool]
-	keepBackup = false
 [alias]
 	ignore = !curl -sl https://www.gitignore.io/api/$(echo $@ | tr -s [:blank:] ,)
 	tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
@@ -41,3 +35,11 @@
 	insteadOf = gh
 [url "git@gitlab.com"]
 	insteadOf = gl
+[difftool "ediff"]
+	cmd = emacsclient -c --eval \"(ediff-files \\\"$LOCAL\\\" \\\"$REMOTE\\\")\"
+[mergetool "emerge"]
+	cmd = emacsclient -c --eval \"(emerge-files \\\"$LOCAL\\\" \\\"$REMOTE\\\" \\\"$MERGED\\\")\"
+[diff]
+	guitool = ediff
+[merge]
+	guitool = emerge
