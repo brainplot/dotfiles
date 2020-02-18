@@ -35,6 +35,8 @@
 	insteadOf = gh
 [url "git@gitlab.com"]
 	insteadOf = gl
+[url "https://aur.archlinux.org/"]
+	insteadOf = aur:
 [difftool "ediff"]
 	cmd = emacsclient -c --eval \"(ediff-files \\\"$LOCAL\\\" \\\"$REMOTE\\\")\"
 [mergetool "emerge"]
