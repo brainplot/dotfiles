@@ -31,10 +31,10 @@
 	rl = reflog
 	ca = commit --amend
 	squeeze = !git reflog expire --all --expire=now && git gc --prune=now --aggressive
-[url "git@github.com"]
-	insteadOf = gh
-[url "git@gitlab.com"]
-	insteadOf = gl
+[url "git@github.com:"]
+	insteadOf = gh:
+[url "git@gitlab.com:"]
+	insteadOf = gl:
 [url "https://aur.archlinux.org/"]
 	insteadOf = aur:
 [difftool "ediff"]
