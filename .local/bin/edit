@@ -1,5 +1,0 @@
-#!/bin/sh
-
-USER_EDITOR="${VISUAL:-${EDITOR:-nano}}"
-
-$USER_EDITOR "$@"
