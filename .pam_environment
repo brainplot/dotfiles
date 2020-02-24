@@ -37,6 +37,9 @@ ELECTRON_TRASH                  DEFAULT=kioclient5
 ANDROID_SDK_ROOT                DEFAULT=${XDG_DATA_HOME}/android-sdk
 PATH                            DEFAULT=${ANDROID_SDK_ROOT}/platform-tools:${PATH}
 
+# Alternate location for Gradle's data
+GRADLE_USER_HOME                DEFAULT=${XDG_DATA_HOME}/gradle
+
 # Alternate location for less's config file and cache
 LESSKEY                         DEFAULT=${XDG_CONFIG_HOME}/less/lesskey
 LESSHISTFILE                    DEFAULT=${XDG_CACHE_HOME}/less/history
