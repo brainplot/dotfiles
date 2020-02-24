@@ -44,6 +44,9 @@ GRADLE_USER_HOME                DEFAULT=${XDG_DATA_HOME}/gradle
 LESSKEY                         DEFAULT=${XDG_CONFIG_HOME}/less/lesskey
 LESSHISTFILE                    DEFAULT=${XDG_CACHE_HOME}/less/history
 
+# Alternate location for npm's data
+NPM_CONFIG_USERCONFIG           DEFAULT=${XDG_CONFIG_HOME}/npm/npmrc
+
 # Set user-wide paths to binaries and dynamically-linked libraries
 PATH                            DEFAULT=@{HOME}/.local/bin:${PATH}
 
