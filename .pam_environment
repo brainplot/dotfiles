@@ -1,15 +1,26 @@
 # -*- indent-tabs-mode: nil -*-
 
+# XDG specifications
+# https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+# User directories
+XDG_CONFIG_HOME                 DEFAULT=@{HOME}/.config
+XDG_CACHE_HOME                  DEFAULT=@{HOME}/.cache
+XDG_DATA_HOME                   DEFAULT=@{HOME}/.local/share
+
+# System directories
+XDG_DATA_DIRS                   DEFAULT=/usr/local/share:/usr/share    OVERRIDE=${XDG_DATA_DIRS}
+XDG_CONFIG_DIRS                 DEFAULT=/etc/xdg                       OVERRIDE=${XDG_CONFIG_DIRS}
+
 # NodeJS path for global packages (i.e. those installed with `-g`)
-npm_config_prefix               DEFAULT=@{HOME}/.node_modules
+npm_config_prefix               DEFAULT=${XDG_DATA_HOME}/node_modules
 PATH                            DEFAULT=${npm_config_prefix}/bin:${PATH}
 
 # Set cargo location
-CARGO_HOME                      DEFAULT=@{HOME}/.local/opt/cargo
+CARGO_HOME                      DEFAULT=${XDG_DATA_HOME}/cargo
 PATH                            DEFAULT=${CARGO_HOME}/bin:${PATH}
 
 # Set up composer installation
-COMPOSER_HOME                   DEFAULT=@{HOME}/.local/opt/composer
+COMPOSER_HOME                   DEFAULT=${XDG_DATA_HOME}/composer
 PATH                            DEFAULT=${COMPOSER_HOME}/vendor/bin:${PATH}
 
 # Use KDE file picker in GTK apps
@@ -23,7 +34,7 @@ CTEST_PARALLEL_LEVEL            DEFAULT=${CMAKE_BUILD_PARALLEL_LEVEL}
 ELECTRON_TRASH                  DEFAULT=kioclient5
 
 # Set the root of the Android SDK for proper detection in Android Studio
-ANDROID_SDK_ROOT                DEFAULT=@{HOME}/Android/Sdk
+ANDROID_SDK_ROOT                DEFAULT=${XDG_DATA_HOME}/android-sdk
 PATH                            DEFAULT=${ANDROID_SDK_ROOT}/platform-tools:${PATH}
 
 # Set user-wide paths to binaries and dynamically-linked libraries
