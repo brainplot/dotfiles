@@ -7,7 +7,6 @@
 	verbose = true
 [core]
 	autocrlf = input
-	excludesfile = ~/.gitignore
 	pager = less -x1,5
 [alias]
 	ignore = !curl -sl https://www.gitignore.io/api/$(echo $@ | tr -s [:blank:] ,)
