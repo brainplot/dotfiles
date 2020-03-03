@@ -49,8 +49,3 @@ NPM_CONFIG_USERCONFIG           DEFAULT=${XDG_CONFIG_HOME}/npm/npmrc
 
 # Set user-wide paths to binaries and dynamically-linked libraries
 PATH                            DEFAULT=@{HOME}/.local/bin:${PATH}
-
-# System's editors
-ALTERNATE_EDITOR                DEFAULT=emacs
-EDITOR                          DEFAULT=nano
-VISUAL                          DEFAULT="emacsclient -c"
