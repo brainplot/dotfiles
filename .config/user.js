@@ -1,4 +1,5 @@
 // My preferences
+user_pref("browser.aboutConfig.showWarning", false);
 user_pref("browser.cache.disk.enable", false);
 user_pref("browser.cache.memory.capacity", 42000);
 user_pref("extensions.pocket.enabled", false);
