@@ -8,6 +8,10 @@
 # Source custom aliases, if present
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 
+# Edit bash keybindings
+stty werase undef
+bind '"\C-w": backward-kill-word'
+
 # Don't log duplicate commands on the command history
 HISTCONTROL=ignoredups
 
