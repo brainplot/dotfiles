@@ -27,5 +27,15 @@ shopt -s autocd
 # Check the window size after every command so that text wraps properly
 shopt -s checkwinsize
 
+# Editor settings
+if [ -n "$DISPLAY" ]
+then
+	export ALTERNATE_EDITOR=emacs
+	export EDITOR='emacsclient -c'
+	export VISUAL="$EDITOR"
+else
+	export EDITOR=nano
+fi
+
 # Prompt customization
 PS1='[\u@\h \W]\$ '
