@@ -13,7 +13,7 @@ stty werase undef
 bind '"\C-w": backward-kill-word'
 
 # Don't log duplicate commands on the command history
-HISTCONTROL=ignoredups
+HISTCONTROL=ignoreboth
 
 # Set the pseudo-tty for the gpg-agent
 export GPG_TTY=$(tty)
