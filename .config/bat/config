@@ -1,3 +1,5 @@
+#!/hint/sh
+
 # Set the theme
 --theme=TwoDark
 
@@ -5,7 +7,10 @@
 --italic-text=always
 
 # Use C++ syntax (instead of C) for .h header files
---map-syntax h:cpp
+--map-syntax h:C++
 
 # Open .clang-format files as YAML files
---map-syntax .clang-format:yaml
+--map-syntax .clang-format:YAML
+
+# Open cargo config files as TOML files
+--map-syntax **/*cargo/config:TOML
