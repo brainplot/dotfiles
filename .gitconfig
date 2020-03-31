@@ -31,6 +31,7 @@
 	ca = commit --amend
 	squeeze = !git reflog expire --all --expire=now && git gc --prune=now --aggressive
 	enable-hooks = !rename '.sample' '' .git/hooks/{prepare-commit-msg,pre-push}.sample
+	dance = !git add -A && git commit -m 'Initial commit'
 [url "git@github.com:"]
 	insteadOf = gh:
 [url "git@gitlab.com:"]
