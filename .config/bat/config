@@ -14,3 +14,6 @@
 
 # Open cargo config files as TOML files
 --map-syntax **/*cargo/config:TOML
+
+# Open tmux config file with bash syntax
+--map-syntax .tmux.conf:'Bourne Again Shell (bash)'
