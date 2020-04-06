@@ -11,10 +11,6 @@ XDG_DATA_HOME                   DEFAULT=@{HOME}/.local/share
 XDG_DATA_DIRS                   DEFAULT=/usr/local/share:/usr/share    OVERRIDE=${XDG_DATA_DIRS}
 XDG_CONFIG_DIRS                 DEFAULT=/etc/xdg                       OVERRIDE=${XDG_CONFIG_DIRS}
 
-# NodeJS path for global packages (i.e. those installed with `-g`)
-npm_config_prefix               DEFAULT=${XDG_DATA_HOME}/node_modules
-PATH                            DEFAULT=${npm_config_prefix}/bin:${PATH}
-
 # Set cargo location
 CARGO_HOME                      DEFAULT=${XDG_DATA_HOME}/cargo
 PATH                            DEFAULT=${CARGO_HOME}/bin:${PATH}
