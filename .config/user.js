@@ -8,6 +8,9 @@ user_pref("gfx.canvas.azure.accelerated", true);
 user_pref("gfx.webrender.all", true);
 user_pref("layers.acceleration.force-enabled", true);
 
+// Annoyances
+user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
+
 // Smooth physics-based scrolling in Firefox
 user_pref("general.smoothScroll.lines.durationMaxMS", 125);
 user_pref("general.smoothScroll.lines.durationMinMS", 125);
