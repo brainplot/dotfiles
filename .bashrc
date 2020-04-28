@@ -37,6 +37,7 @@ alias config='git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME"'
 alias la='ls -lhA'
 alias ll='ls -lh'
 alias ls='ls --color=auto'
+alias tree="tree -I '.git|.hg|.svn'"
 alias bashconfig="$EDITOR $HOME/.bashrc"
 alias nvimconfig="nvim $XDG_CONFIG_HOME/nvim/init.vim"
 
