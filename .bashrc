@@ -5,9 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# Source custom aliases, if present
-[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
-
 # Edit bash keybindings
 stty werase undef
 bind '"\C-w": backward-kill-word'
@@ -38,3 +35,9 @@ fi
 
 # Prompt customization
 PS1='[\u@\h \W]\$ '
+
+# Aliases
+alias config='git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME"'
+alias la='ls -lhA'
+alias ll='ls -lh'
+alias ls='ls --color=auto'
