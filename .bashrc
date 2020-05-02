@@ -30,8 +30,7 @@ shopt -s checkwinsize
 # Editor settings
 if [ -n "$DISPLAY" ]
 then
-	export ALTERNATE_EDITOR=emacs
-	export EDITOR='emacsclient -c'
+	export EDITOR=nvim
 	export VISUAL="$EDITOR"
 else
 	export EDITOR=nano
