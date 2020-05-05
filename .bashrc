@@ -8,6 +8,9 @@
 # Don't log duplicate commands on the command history
 HISTCONTROL=ignoreboth
 
+# Don't expand . and .. when globbing with .*
+GLOBIGNORE='.:..'
+
 # Set the pseudo-tty for the gpg-agent
 export GPG_TTY="$(tty)"
 # Update the tty view of the SSH agent. Not needed if you're using the GPG agent
