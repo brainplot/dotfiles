@@ -1,12 +1,8 @@
-# Search through history with Up and Down arrow keys
-"\e[A": history-search-backward
-"\e[B": history-search-forward
+# Include global configuration
+$include /etc/inputrc
 
 # Color the common prefix
 set colored-completion-prefix on
-
-# Color files by types
-set colored-stats on
 
 # Complete files in a case-insensitive fashion
 set completion-ignore-case on
