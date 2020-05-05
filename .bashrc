@@ -30,7 +30,7 @@ else
 fi
 
 # Prompt customization
-PS1='[\u@\h \W]\$ '
+PS1="${PS1:-[\u@\h \W]\$ }"
 
 # Aliases
 alias config='git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME"'
