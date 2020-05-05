@@ -20,9 +20,6 @@ PATH                            DEFAULT=${CARGO_HOME}/bin:${PATH}
 COMPOSER_HOME                   DEFAULT=${XDG_DATA_HOME}/composer
 PATH                            DEFAULT=${COMPOSER_HOME}/vendor/bin:${PATH}
 
-# Set appearance settings for Qt apps
-QT_QPA_PLATFORMTHEME            DEFAULT=gnome
-
 # Set the default number of jobs used by `cmake --build` and `ctest`
 CMAKE_BUILD_PARALLEL_LEVEL      DEFAULT=8
 CTEST_PARALLEL_LEVEL            DEFAULT=${CMAKE_BUILD_PARALLEL_LEVEL}
