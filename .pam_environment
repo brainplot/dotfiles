@@ -8,10 +8,6 @@ XDG_CONFIG_HOME                 DEFAULT=@{HOME}/.config
 XDG_CACHE_HOME                  DEFAULT=@{HOME}/.cache
 XDG_DATA_HOME                   DEFAULT=@{HOME}/.local/share
 
-# System directories
-XDG_DATA_DIRS                   DEFAULT=/usr/local/share:/usr/share    OVERRIDE=${XDG_DATA_DIRS}
-XDG_CONFIG_DIRS                 DEFAULT=/etc/xdg                       OVERRIDE=${XDG_CONFIG_DIRS}
-
 # Set cargo location
 CARGO_HOME                      DEFAULT=${XDG_DATA_HOME}/cargo
 PATH                            DEFAULT=${CARGO_HOME}/bin:${PATH}
