@@ -32,6 +32,9 @@ export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
 export LESSKEY="$XDG_CONFIG_HOME/less/lesskey"
 export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
 
+# Default options for less
+export LESS='-R -F --shift 5'
+
 # Alternate location for npm's data
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 
