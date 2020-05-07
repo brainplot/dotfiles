@@ -28,12 +28,10 @@ PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
 # Alternate location for Gradle's data
 export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
 
-# Alternate location for less's config file and cache
+# Alternate location for less's config file and cache and default options
+export LESS='-R -F --shift 5'
 export LESSKEY="$XDG_CONFIG_HOME/less/lesskey"
 export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
-
-# Default options for less
-export LESS='-R -F --shift 5'
 
 # Alternate location for npm's data
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
