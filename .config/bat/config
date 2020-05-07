@@ -17,3 +17,6 @@
 
 # Open tmux config file with bash syntax
 --map-syntax .tmux.conf:'Bourne Again Shell (bash)'
+
+# Open ebuild files used in gentoo with bash syntax
+--map-syntax *.ebuild:'Bourne Again Shell (bash)'
