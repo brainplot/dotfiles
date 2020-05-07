@@ -12,7 +12,7 @@ HISTCONTROL=ignoreboth
 GLOBIGNORE='.:..'
 
 # Set the pseudo-tty for the gpg-agent
-export GPG_TTY="$(tty)"
+export GPG_TTY=$(tty)
 # Update the tty view of the SSH agent. Not needed if you're using the GPG agent
 # without SSH support.
 # (Needs to be executed every time a new terminal is launched)
@@ -24,7 +24,7 @@ shopt -s autocd
 shopt -s checkwinsize
 
 # Editor settings
-if [ -n "$DISPLAY" ]
+if [[ -n "$DISPLAY" ]]
 then
 	export EDITOR=nvim
 	export VISUAL="$EDITOR"
