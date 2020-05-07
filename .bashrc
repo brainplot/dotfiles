@@ -32,11 +32,27 @@ else
 	export EDITOR=nano
 fi
 
-# Prompt customization
-PS1="${PS1:-[\u@\h \W]\$ }"
+# Gentoo provides LS_COLORS in the global bashrc and sets it only if the
+# terminal is capable of displaying colors
+# To get a list of all supported colors, run the following command
+# for x in {0..8}; do for i in {30..37}; do for a in {40..47}; do echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "; done; echo; done; done; echo
+if [[ -n "$LS_COLORS" ]]
+then
+	HN_CLR='\[\033[01;36m\]' # Hostname
+	UR_CLR='\[\033[01;33m\]' # Username
+	WD_CLR='\[\033[01;34m\]' # Working directory
+	AT_CLR='\[\033[01;31m\]' # @ symbol
+	DL_CLR='\[\033[01;32m\]' # Dollar sign after the prompt
+	RT_CLR='\[\033[00m\]'    # Reset all colors
+fi
+
+PS1="${UR_CLR}\u${AT_CLR}@${HN_CLR}\h ${WD_CLR}\w${RT_CLR}\n${DL_CLR}\$${RT_CLR} "
 
 # Aliases
 alias config='git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME"'
 alias la='ls -lhA'
 alias ll='ls -lh'
 alias ls='ls --color=auto'
+
+# Clean-up
+unset {HN,UR,WD,AT,DL,RT}_CLR
