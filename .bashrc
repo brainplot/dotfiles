@@ -32,6 +32,12 @@ else
 	export EDITOR=nano
 fi
 
+# Aliases
+alias config='git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME"'
+alias la='ls -lhA'
+alias ll='ls -lh'
+alias ls='ls --color=auto'
+
 # Gentoo provides LS_COLORS in the global bashrc and sets it only if the
 # terminal is capable of displaying colors
 # To get a list of all supported colors, run the following command
@@ -74,12 +80,6 @@ then
 fi
 
 PS1+="\n${DL_CLR}\$${RT_CLR} "
-
-# Aliases
-alias config='git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME"'
-alias la='ls -lhA'
-alias ll='ls -lh'
-alias ls='ls --color=auto'
 
 # Clean-up
 unset {HN,UR,WD,AT,DL,VC,RT}_CLR
