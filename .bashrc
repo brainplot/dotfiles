@@ -37,6 +37,8 @@ alias config='git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME"'
 alias la='ls -lhA'
 alias ll='ls -lh'
 alias ls='ls --color=auto'
+alias bashconfig="$EDITOR $HOME/.bashrc"
+alias nvimconfig="nvim $XDG_CONFIG_HOME/nvim/init.vim"
 
 # Gentoo provides LS_COLORS in the global bashrc and sets it only if the
 # terminal is capable of displaying colors
