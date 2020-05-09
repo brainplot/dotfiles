@@ -77,6 +77,9 @@ then
 	GIT_PS1_SHOWUNTRACKEDFILES=1
 	GIT_PS1_SHOWUPSTREAM=verbose
 	source_git_prompt && PS1+="${VC_CLR}\$(__git_ps1)${RT_CLR}"
+	# Since we know there's git installed, we can load completion its completion
+	_completion_loader git
+	__git_complete config __git_main
 fi
 
 PS1+="\n${DL_CLR}\$${RT_CLR} "
