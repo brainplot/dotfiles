@@ -33,6 +33,7 @@
 	enable-hooks = !rename '.sample' '' .git/hooks/{prepare-commit-msg,pre-push}.sample
 	dance = !git add -A && git commit -m 'Initial commit'
 	select = !git status --porcelain -z | fzf --multi --read0 --print0 | sed -z 's/^\\s\\w\\s//' | xargs -r0 git add
+	psu = "!psu() { git push -u \"${1:-origin}\" $(git rev-parse --abbrev-ref HEAD); }; psu"
 [url "git@github.com:"]
 	insteadOf = gh:
 [url "git@gitlab.com:"]
