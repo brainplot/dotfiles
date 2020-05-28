@@ -11,6 +11,12 @@ user_pref("layers.acceleration.force-enabled", true);
 // Annoyances
 user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
 
+// Prevent sites from knowing your're running an ad-blocker
+user_pref("plugin.scan.plid.all", false);
+
+// Enable DNT header
+user_pref("privacy.donottrackheader.enabled", true);
+
 // Smooth physics-based scrolling in Firefox
 user_pref("general.smoothScroll.lines.durationMaxMS", 125);
 user_pref("general.smoothScroll.lines.durationMinMS", 125);
