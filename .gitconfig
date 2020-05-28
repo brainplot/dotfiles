@@ -24,6 +24,7 @@
 	rss = restore --staged
 	sh = show
 	can = commit --amend --no-edit
+	caan = commit --all --amend --no-edit
 	rb = rebase
 	rbc = rebase --continue
 	rba = rebase --abort
