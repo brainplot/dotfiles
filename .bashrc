@@ -40,6 +40,7 @@ alias ls='ls --color=auto'
 alias tree="tree -I '.git|.hg|.svn'"
 alias bashconfig='"$EDITOR" "$HOME"/.bashrc'
 alias nvimconfig='nvim "$XDG_CONFIG_HOME"/nvim/init.vim'
+alias gitconfig='"$EDITOR" "$HOME"/.gitconfig'
 
 # Gentoo provides LS_COLORS in the global bashrc and sets it only if the
 # terminal is capable of displaying colors
