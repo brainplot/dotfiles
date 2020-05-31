@@ -38,6 +38,12 @@
 		git push -u \"${1:-origin}\" $(git rev-parse --abbrev-ref HEAD); \
 	}; psu"
 	root = rev-parse --show-toplevel
+	# Add files to the local gitignore (the one located at .git/info/exclude)
+	exclude = "!gex() { \
+		[ \"$#\" -ne 0 ] \
+		&& for f in \"$@\"; do printf '%q\\n' \"$f\" >>.git/info/exclude; done \
+		|| echo 'Usage: git exclude [FILE TO EXCLUDE]' >&2; \
+	}; gex"
 [url "git@github.com:"]
 	insteadOf = gh:
 [url "git@gitlab.com:"]
