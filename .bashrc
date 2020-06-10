@@ -43,6 +43,12 @@ alias nvimconfig='nvim "$XDG_CONFIG_HOME"/nvim/init.vim'
 alias gitconfig='"$EDITOR" "$HOME"/.gitconfig'
 alias cdnvim='cd "$XDG_CONFIG_HOME"/nvim'
 
+case $(grep -Pho '(?<=ID=).+' /etc/*release) in
+	gentoo )
+		alias upgrade-system='sudo emaint -a sync && sudo emerge --ask --quiet --update --deep --newuse --with-bdeps=y @world'
+		;;
+esac
+
 # Gentoo provides LS_COLORS in the global bashrc and sets it only if the
 # terminal is capable of displaying colors
 # To get a list of all supported colors, run the following command
