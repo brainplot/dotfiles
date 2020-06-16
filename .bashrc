@@ -64,30 +64,30 @@ then
 	RT_CLR='\[\033[00m\]'    # Reset all colors
 fi
 
+source_from_data_dirs() {
+	IFS=:
+	local exit_code=1
+	local d;
+	for d in $XDG_DATA_DIRS
+	do
+		local f="$d/$1"
+		[[ -r "$f" ]] && source "$f" && exit_code=0 && break
+	done
+	unset IFS
+	return "$exit_code"
+}
+
 PS1="${UR_CLR}\u${AT_CLR}@${HN_CLR}\h ${WD_CLR}\w${RT_CLR}"
 
 # Git prompt
 if command -v git >/dev/null
 then
-	source_git_prompt() {
-		IFS=:
-		local exit_code=1
-		local d;
-		for d in $XDG_DATA_DIRS
-		do
-			local f="$d/git/git-prompt.sh"
-			[[ -r "$f" ]] && source "$f" && exit_code=0 && break
-		done
-		unset IFS
-		return "$exit_code"
-	}
-
 	GIT_PS1_DESCRIBE_STYLE=branch
 	GIT_PS1_SHOWDIRTYSTATE=1
 	GIT_PS1_SHOWSTASHSTATE=1
 	GIT_PS1_SHOWUNTRACKEDFILES=1
 	GIT_PS1_SHOWUPSTREAM=verbose
-	source_git_prompt && PS1+="${VC_CLR}\$(__git_ps1)${RT_CLR}"
+	source_from_data_dirs 'git/git-prompt.sh' && PS1+="${VC_CLR}\$(__git_ps1)${RT_CLR}"
 	# Since we know git is installed, we can load its completions
 	_completion_loader git
 	__git_complete config __git_main
@@ -95,6 +95,9 @@ fi
 
 PS1+="\n${DL_CLR}\$${RT_CLR} "
 
+# fzf keybindings
+source_from_data_dirs 'fzf/key-bindings.bash'
+
 # Clean-up
 unset {HN,UR,WD,AT,DL,VC,RT}_CLR
-unset source_git_prompt
+unset source_from_data_dirs
