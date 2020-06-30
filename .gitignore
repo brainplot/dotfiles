@@ -7,3 +7,8 @@
 
 # Ignore all history files
 .*_history
+
+# Ignore WSL artifacts
+.hushlogin
+.motd_shown
+.sudo_as_admin_successful
