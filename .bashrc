@@ -43,6 +43,12 @@ alias nvimconfig='nvim "$XDG_CONFIG_HOME"/nvim/init.vim'
 alias gitconfig='"$EDITOR" "$HOME"/.gitconfig'
 alias cdnvim='cd "$XDG_CONFIG_HOME"/nvim'
 
+# Some distros have 'bat' as 'batcat'
+if command -v batcat >/dev/null
+then
+	alias bat=batcat
+fi
+
 case $(grep -Pho '(?<=ID=).+' /etc/*release) in
 	gentoo )
 		alias upgrade-system='sudo emaint -a sync && sudo emerge --ask --quiet --update --deep --newuse --with-bdeps=y @world'
