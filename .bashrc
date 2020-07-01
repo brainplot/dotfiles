@@ -49,9 +49,12 @@ then
 	alias bat=batcat
 fi
 
-case $(grep -Pho '(?<=ID=).+' /etc/*release) in
-	gentoo )
+case $(grep -Pho '(?<=^ID=).+' /etc/*release) in
+	gentoo)
 		alias upgrade-system='sudo emaint -a sync && sudo emerge --ask --quiet --update --deep --newuse --with-bdeps=y @world'
+		;;
+	ubuntu)
+		alias upgrade-system='sudo apt update && sudo apt upgrade'
 		;;
 esac
 
