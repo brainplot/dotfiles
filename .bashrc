@@ -24,12 +24,12 @@ shopt -s autocd
 shopt -s checkwinsize
 
 # Editor settings
-if [[ -n "$DISPLAY" ]]
+if [[ $TERM = xterm* ]]
 then
 	export EDITOR=nvim
 	export VISUAL="$EDITOR"
 else
-	export EDITOR=nano
+	export EDITOR=ed
 fi
 
 # Aliases
@@ -62,7 +62,7 @@ esac
 # terminal is capable of displaying colors
 # To get a list of all supported colors, run the following command
 # for x in {0..8}; do for i in {30..37}; do for a in {40..47}; do echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "; done; echo; done; done; echo
-if [[ -n "$LS_COLORS" ]]
+if [[ $TERM = xterm* ]]
 then
 	HN_CLR='\[\033[01;36m\]' # Hostname
 	UR_CLR='\[\033[01;33m\]' # Username
