@@ -22,6 +22,8 @@ gpg-connect-agent updatestartuptty /bye >/dev/null
 shopt -s autocd
 # Check the window size after every command so that text wraps properly
 shopt -s checkwinsize
+# Complete environment variables
+shopt -s direxpand
 
 # Editor settings
 if [[ $TERM = xterm* ]]
