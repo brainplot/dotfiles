@@ -12,3 +12,8 @@
 .hushlogin
 .motd_shown
 .sudo_as_admin_successful
+
+# Vim stuff
+.vim
+.viminfo
+.vimrc
