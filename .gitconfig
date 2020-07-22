@@ -9,7 +9,7 @@
 	autocrlf = input
 	pager = less -x1,5
 [alias]
-	ignore = !curl -sl https://www.gitignore.io/api/$(echo $@ | tr -s [:blank:] ,)
+	ignore = !curl -sLw '\n' "https://www.toptal.com/developers/gitignore/api/$(echo $@ | tr -s [:blank:] ,)"
 	tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	pristine = !git reset --hard && git clean -fdx
 	d = diff
