@@ -98,7 +98,7 @@ then
 	GIT_PS1_SHOWSTASHSTATE=1
 	GIT_PS1_SHOWUNTRACKEDFILES=1
 	GIT_PS1_SHOWUPSTREAM=verbose
-	source_from_data_dirs 'git/git-prompt.sh' && PS1+="${VC_CLR}\$(__git_ps1)${RT_CLR}"
+	PS1+="${VC_CLR}\$(__git_ps1)${RT_CLR}"
 	# Since we know git is installed, we can load its completions
 	_completion_loader git
 	__git_complete config __git_main
