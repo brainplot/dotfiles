@@ -107,6 +107,7 @@ fi
 PS1+="\n${DL_CLR}\$${RT_CLR} "
 
 # fzf keybindings
+source_from_data_dirs 'fzf/completion.bash'
 source_from_data_dirs 'fzf/key-bindings.bash'
 
 # Clean-up
