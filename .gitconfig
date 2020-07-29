@@ -17,6 +17,7 @@
 	co = checkout
 	s = status
 	ps = push
+	psf = push --force
 	pl = pull
 	dc = diff --cached
 	l = log
