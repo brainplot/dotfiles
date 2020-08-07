@@ -12,25 +12,6 @@
 	ignore = !curl -sLw '\n' "https://www.toptal.com/developers/gitignore/api/$(echo $@ | tr -s [:blank:] ,)"
 	lol = log --graph --pretty=birdseye
 	pristine = !git reset --hard && git clean -fdx
-	d = diff
-	c = commit
-	co = checkout
-	s = status
-	ps = push
-	psf = push --force
-	pl = pull
-	dc = diff --cached
-	l = log
-	rs = restore
-	rss = restore --staged
-	sh = show
-	can = commit --amend --no-edit
-	caan = commit --all --amend --no-edit
-	rb = rebase
-	rbc = rebase --continue
-	rba = rebase --abort
-	rl = reflog
-	ca = commit --amend
 	squeeze = !git reflog expire --all --expire=now && git gc --prune=now --aggressive
 	enable-hooks = !rename '.sample' '' .git/hooks/{prepare-commit-msg,pre-push}.sample
 	dance = !git add -A && git commit -m 'Initial commit'
