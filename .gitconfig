@@ -50,3 +50,5 @@
 	insteadOf = aur:
 [pull]
 	rebase = true
+[pretty]
+	birdseye = %C(auto)%h%d% s %C(bold blue)<%aN> %C(green)(%cr)%Creset
