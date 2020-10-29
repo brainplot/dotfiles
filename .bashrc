@@ -52,15 +52,6 @@ then
 	alias bat=batcat
 fi
 
-case $(grep -Pho '(?<=^ID=).+' /etc/*release) in
-	gentoo)
-		alias upgrade-system='sudo emaint -a sync && sudo emerge --ask --quiet --update --deep --newuse --with-bdeps=y @world'
-		;;
-	ubuntu)
-		alias upgrade-system='sudo apt update && sudo apt upgrade'
-		;;
-esac
-
 # Gentoo provides LS_COLORS in the global bashrc and sets it only if the
 # terminal is capable of displaying colors
 # To get a list of all supported colors, run the following command
