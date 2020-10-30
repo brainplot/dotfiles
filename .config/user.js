@@ -9,6 +9,7 @@ user_pref("gfx.webrender.all", true);
 user_pref("layers.acceleration.force-enabled", true);
 
 // Annoyances
+user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
 user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
 
 // Prevent sites from knowing your're running an ad-blocker
