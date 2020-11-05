@@ -84,7 +84,7 @@ source_from_data_dirs() {
 PS1="${UR_CLR}\u${AT_CLR}@${HN_CLR}\h ${WD_CLR}\w${RT_CLR}"
 
 # Git prompt
-if command -v git >/dev/null
+if [[ -r ~/.git-prompt.sh ]] && . ~/.git-prompt.sh
 then
 	GIT_PS1_DESCRIBE_STYLE=branch
 	GIT_PS1_SHOWDIRTYSTATE=1
