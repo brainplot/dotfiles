@@ -18,5 +18,6 @@
 .viminfo
 .vimrc
 
-# Ignore ~/.git-prompt.sh symlink
+# Ignore ~/.git-prompt.sh and ~/.git-completion.sh symlinks
 .git-prompt.sh
+.git-completion.sh
