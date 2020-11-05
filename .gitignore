@@ -17,3 +17,6 @@
 .vim
 .viminfo
 .vimrc
+
+# Ignore ~/.git-prompt.sh symlink
+.git-prompt.sh
