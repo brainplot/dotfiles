@@ -79,8 +79,11 @@ then
 	GIT_PS1_SHOWUNTRACKEDFILES=1
 	GIT_PS1_SHOWUPSTREAM=verbose
 	PS1+="${VC_CLR}\$(__git_ps1)${RT_CLR}"
-	# Since we know git is installed, we can load its completions
-	_completion_loader git
+fi
+
+# Git completion
+if [[ -r ~/.git-completion.sh ]] && . ~/.git-completion.sh
+then
 	__git_complete config __git_main
 fi
 
