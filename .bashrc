@@ -44,6 +44,7 @@ alias tree="tree -I '.git|.hg|.svn'"
 alias bashconfig='"$EDITOR" "$HOME"/.bashrc'
 alias nvimconfig='nvim "$XDG_CONFIG_HOME"/nvim/init.vim'
 alias gitconfig='"$EDITOR" "$HOME"/.gitconfig'
+alias tmuxconfig='"$EDITOR" "$HOME"/.tmux.conf'
 alias cdnvim='cd "$XDG_CONFIG_HOME"/nvim'
 
 # Some distros have 'bat' as 'batcat'
