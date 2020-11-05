@@ -68,19 +68,6 @@ then
 	RT_CLR='\[\033[00m\]'    # Reset all colors
 fi
 
-source_from_data_dirs() {
-	IFS=:
-	local exit_code=1
-	local d;
-	for d in $XDG_DATA_DIRS
-	do
-		local f="$d/$1"
-		[[ -r "$f" ]] && source "$f" && exit_code=0 && break
-	done
-	unset IFS
-	return "$exit_code"
-}
-
 PS1="${UR_CLR}\u${AT_CLR}@${HN_CLR}\h ${WD_CLR}\w${RT_CLR}"
 
 # Git prompt
@@ -100,9 +87,8 @@ fi
 PS1+="\n${DL_CLR}\$${RT_CLR} "
 
 # fzf keybindings
-source_from_data_dirs 'fzf/completion.bash'
-source_from_data_dirs 'fzf/key-bindings.bash'
+source /usr/share/doc/fzf/examples/completion.bash
+source /usr/share/doc/fzf/examples/key-bindings.bash
 
 # Clean-up
 unset {HN,UR,WD,AT,DL,VC,RT}_CLR
-unset source_from_data_dirs
