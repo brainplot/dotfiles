@@ -13,6 +13,10 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 PATH="$CARGO_HOME/bin:$PATH"
 
+# Set Golang local repository
+export GOPATH="$XDG_DATA_HOME/go"
+PATH="$GOPATH/bin:$PATH"
+
 # Set up composer installation
 export COMPOSER_HOME="$XDG_DATA_HOME/composer"
 PATH="$COMPOSER_HOME/vendor/bin:$PATH"
