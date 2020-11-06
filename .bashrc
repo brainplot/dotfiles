@@ -26,7 +26,7 @@ shopt -s checkwinsize
 shopt -s direxpand
 
 # Editor settings
-if [[ $TERM = xterm* ]]
+if [[ $TERM = xterm* ]] || [[ $TERM = screen* ]]
 then
 	export EDITOR=nvim
 	export VISUAL="$EDITOR"
