@@ -8,7 +8,7 @@
 # Don't log duplicate commands on the command history
 HISTCONTROL=ignoreboth
 
-# Don't expand . and .. when globbing with .*
+# Exclude . and .. from .* expansion
 GLOBIGNORE='.:..'
 
 # Set the pseudo-tty for the gpg-agent
