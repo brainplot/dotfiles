@@ -3,7 +3,10 @@
 #
 
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+case "$-" in
+	*i*) ;;
+	*) return
+esac
 
 # Don't log duplicate commands on the command history
 HISTCONTROL=ignoreboth
@@ -26,13 +29,15 @@ shopt -s checkwinsize
 shopt -s direxpand
 
 # Editor settings
-if [[ $TERM = xterm* ]] || [[ $TERM = screen* ]]
-then
-	export EDITOR=nvim
-	export VISUAL="$EDITOR"
-else
-	export EDITOR=ed
-fi
+case "$TERM" in
+	xterm*|screen*)
+		export EDITOR=nvim
+		export VISUAL="$EDITOR"
+		;;
+	*)
+		export EDITOR=ed
+		;;
+esac
 
 # Aliases
 alias config='git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME"'
@@ -48,8 +53,7 @@ alias tmuxconfig='"$EDITOR" "$HOME"/.tmux.conf'
 alias cdnvim='cd "$XDG_CONFIG_HOME"/nvim'
 
 # Some distros have 'bat' as 'batcat'
-if command -v batcat >/dev/null
-then
+if command -v batcat >/dev/null; then
 	alias bat=batcat
 fi
 
@@ -63,10 +67,8 @@ esac
 # should be on the output of commands, not on the prompt
 #force_color_prompt=yes
 
-if [ -n "$force_color_prompt" ]
-then
-	if command -v tput >/dev/null && tput setaf 1 >&/dev/null
-	then
+if [ -n "$force_color_prompt" ]; then
+	if command -v tput >/dev/null && tput setaf 1 >&/dev/null; then
 		# We have color support; assume it's compliant with Ecma-48
 		# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
 		# a case would tend to support setf rather than setaf.)
@@ -78,8 +80,7 @@ fi
 
 # To get a list of all supported colors, run the following command
 # for x in {0..8}; do for i in {30..37}; do for a in {40..47}; do echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "; done; echo; done; done; echo
-if [[ "$color_prompt" = yes ]]
-then
+if [ "$color_prompt" = yes ]; then
 	HN_CLR='\[\033[01;36m\]' # Hostname
 	UR_CLR='\[\033[01;33m\]' # Username
 	WD_CLR='\[\033[01;34m\]' # Working directory
@@ -92,8 +93,7 @@ fi
 PS1="${UR_CLR}\u${AT_CLR}@${HN_CLR}\h ${WD_CLR}\w${RT_CLR}"
 
 # Git prompt
-if [[ -r ~/.git-prompt.sh ]] && . ~/.git-prompt.sh
-then
+if [ -r ~/.git-prompt.sh ] && . ~/.git-prompt.sh; then
 	GIT_PS1_DESCRIBE_STYLE=branch
 	GIT_PS1_SHOWDIRTYSTATE=1
 	GIT_PS1_SHOWSTASHSTATE=1
@@ -103,8 +103,7 @@ then
 fi
 
 # Git completion
-if [[ -r ~/.git-completion.sh ]] && . ~/.git-completion.sh
-then
+if [ -r ~/.git-completion.sh ] && . ~/.git-completion.sh; then
 	__git_complete config __git_main
 fi
 
