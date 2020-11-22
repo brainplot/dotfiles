@@ -28,17 +28,6 @@ shopt -s checkwinsize
 # Complete environment variables
 shopt -s direxpand
 
-# Editor settings
-case "$TERM" in
-	xterm*|screen*)
-		export EDITOR=nvim
-		export VISUAL="$EDITOR"
-		;;
-	*)
-		export EDITOR=ed
-		;;
-esac
-
 # Aliases
 alias config='git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME"'
 alias la='ls -lhA'

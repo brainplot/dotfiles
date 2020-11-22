@@ -43,3 +43,14 @@ PATH="$XDG_DATA_HOME/node_modules/bin:$PATH"
 
 # Set user-wide paths to binaries and dynamically-linked libraries
 export PATH="$HOME/.local/bin:$PATH"
+
+# Editor settings
+case "$TERM" in
+	xterm*|screen*)
+		export EDITOR=nvim
+		export VISUAL="$EDITOR"
+		;;
+	*)
+		export EDITOR=ed
+		;;
+esac
