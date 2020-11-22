@@ -52,11 +52,6 @@ alias gitconfig='"$EDITOR" "$HOME"/.gitconfig'
 alias tmuxconfig='"$EDITOR" "$HOME"/.tmux.conf'
 alias cdnvim='cd "$XDG_CONFIG_HOME"/nvim'
 
-# Some distros have 'bat' as 'batcat'
-if command -v batcat >/dev/null; then
-	alias bat=batcat
-fi
-
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
 	xterm-color|*-256color) color_prompt=yes;;
