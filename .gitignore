@@ -5,10 +5,10 @@
 # Ignore .password-store since it's its own repo
 .password-store/
 
-# Ignore all history files
+# History files
 .*_history
 
-# Ignore WSL artifacts
+# WSL artifacts
 .hushlogin
 .motd_shown
 .sudo_as_admin_successful
@@ -25,3 +25,9 @@
 # Cloud platforms config data (created by Docker for Windows)
 .aws
 .azure
+
+# Docker stuff
+.docker/
+
+# Misc
+.wget-hsts
