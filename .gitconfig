@@ -13,10 +13,14 @@
 	lol = log --graph --pretty=birdseye
 	pristine = !git reset --hard && git clean -fdx
 	squeeze = !git reflog expire --all --expire=now && git gc --prune=now --aggressive
-	enable-hooks = !rename '.sample' '' .git/hooks/{prepare-commit-msg,pre-push}.sample
 	dance = !git add -A && git commit -m 'Initial commit'
-	psu = "!psu() { git push -u \"${1:-origin}\" HEAD; }; psu"
+	psu = !git push -u "${1:-origin}" "$(git rev-parse --abbrev-ref HEAD)"
 	root = rev-parse --show-toplevel
+	dsclone = "!repo=\"$1\" && \
+		shift && \
+		git clone git@github.com:desotech-it/\"$repo\".git \"$@\" && \
+		git -C \"$repo\" config --local user.email g.recchia@desotech.it && \
+		git -C \"$repo\" config --local commit.gpgSign false"
 [url "git@github.com:"]
 	insteadOf = gh:
 [url "git@gitlab.com:"]
