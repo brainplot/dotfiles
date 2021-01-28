@@ -29,7 +29,6 @@ shopt -s checkwinsize
 shopt -s direxpand
 
 # Aliases
-alias cls=clear
 alias config='git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME"'
 alias la='ls -lhA'
 alias ll='ls -lh'
