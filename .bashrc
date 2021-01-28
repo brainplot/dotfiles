@@ -29,7 +29,7 @@ shopt -s checkwinsize
 shopt -s direxpand
 
 # Aliases
-alias config='git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME"'
+alias dot='git --git-dir="$HOME/.dot.git" --work-tree="$HOME"'
 alias la='ls -lhA'
 alias ll='ls -lh'
 alias ls='ls --color=auto'
@@ -88,7 +88,7 @@ fi
 
 # Git completion
 if [ -r ~/.git-completion.sh ] && . ~/.git-completion.sh; then
-	__git_complete config __git_main
+	__git_complete dot __git_main
 fi
 
 PS1+="\n${DL_CLR}\$${RT_CLR} "
