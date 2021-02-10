@@ -19,8 +19,8 @@
 	dsclone = "!repo=\"$1\" && \
 		shift && \
 		git clone git@github.com:desotech-it/\"$repo\".git \"$@\" && \
-		git -C \"$repo\" config --local user.email g.recchia@desotech.it && \
-		git -C \"$repo\" config --local commit.gpgSign false"
+		git -C \"$repo\" desotech"
+	desotech = !git config --local user.email g.recchia@desotech.it && git config --local commit.gpgSign false
 [url "git@github.com:"]
 	insteadOf = gh:
 [url "git@gitlab.com:"]
