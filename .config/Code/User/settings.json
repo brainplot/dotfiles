@@ -5,7 +5,6 @@
 	"editor.cursorBlinking": "phase",
 	"editor.fontSize": 15,
 	"editor.formatOnSave": true,
-	"editor.suggestSelection": "first",
 	"editor.hideCursorInOverviewRuler": true,
 	"editor.largeFileOptimizations": false,
 	"editor.quickSuggestionsDelay": 64,
@@ -13,12 +12,14 @@
 	"editor.renderWhitespace": "selection",
 	"editor.smoothScrolling": true,
 	"editor.suggest.filterGraceful": false,
+	"editor.suggestSelection": "first",
 	"editor.tabCompletion": "on",
 	"files.hotExit": "off",
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
 	"liveshare.authenticationProvider": "GitHub",
+	"liveshare.increasedGuestLimit": false,
 	"search.exclude": {
 		"**/*build*": true,
 		"**/target": true
@@ -29,10 +30,9 @@
 	"terminal.integrated.fontSize": 16,
 	"terminal.integrated.scrollback": 1024,
 	"update.mode": "none",
+	"workbench.colorTheme": "Tomorrow Night Blue",
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.enableExperiments": false,
 	"workbench.settings.enableNaturalLanguageSearch": false,
-	"workbench.startupEditor": "none",
-	"workbench.colorTheme": "Tomorrow Night Blue",
-	"liveshare.increasedGuestLimit": false
+	"workbench.startupEditor": "none"
 }
