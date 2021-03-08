@@ -18,6 +18,7 @@
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
+	"liveshare.authenticationProvider": "GitHub",
 	"search.exclude": {
 		"**/*build*": true,
 		"**/target": true
