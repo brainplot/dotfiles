@@ -32,5 +32,6 @@
 	"workbench.enableExperiments": false,
 	"workbench.settings.enableNaturalLanguageSearch": false,
 	"workbench.startupEditor": "none",
-	"workbench.colorTheme": "Tomorrow Night Blue"
+	"workbench.colorTheme": "Tomorrow Night Blue",
+	"liveshare.increasedGuestLimit": false
 }
