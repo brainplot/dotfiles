@@ -31,5 +31,6 @@
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.enableExperiments": false,
 	"workbench.settings.enableNaturalLanguageSearch": false,
-	"workbench.startupEditor": "none"
+	"workbench.startupEditor": "none",
+	"workbench.colorTheme": "Tomorrow Night Blue"
 }
