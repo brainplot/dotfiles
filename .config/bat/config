@@ -3,9 +3,6 @@
 # Set the theme
 --theme=TwoDark
 
-# Use italic text on the terminal (not supported on all terminals)
---italic-text=always
-
 # Use C++ syntax (instead of C) for .h header files
 --map-syntax h:C++
 
