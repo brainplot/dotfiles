@@ -3,7 +3,7 @@
 	"editor.accessibilitySupport": "off",
 	"editor.copyWithSyntaxHighlighting": false,
 	"editor.cursorBlinking": "phase",
-	"editor.fontSize": 17,
+	"editor.fontSize": 15,
 	"editor.formatOnSave": true,
 	"editor.suggestSelection": "first",
 	"editor.hideCursorInOverviewRuler": true,
