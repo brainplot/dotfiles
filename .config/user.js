@@ -3,21 +3,12 @@ user_pref("browser.cache.disk.enable", false);
 user_pref("browser.cache.memory.capacity", 327680);
 user_pref("extensions.pocket.enabled", false);
 user_pref("full-screen-api.warning.timeout", 0);
-user_pref("gfx.canvas.azure.accelerated", true);
-user_pref("gfx.webrender.all", true);
-user_pref("layers.acceleration.force-enabled", true);
-
-// Annoyances
-user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
-user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
-user_pref("browser.newtabpage.activity-stream.showSponsored", false);
-user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
+// user_pref("gfx.canvas.azure.accelerated", true);
+// user_pref("gfx.webrender.all", true);
+// user_pref("layers.acceleration.force-enabled", true);
 
 // Prevent sites from knowing your're running an ad-blocker
 user_pref("plugin.scan.plid.all", false);
-
-// Enable DNT header
-user_pref("privacy.donottrackheader.enabled", true);
 
 // Smooth physics-based scrolling in Firefox
 user_pref("general.smoothScroll.lines.durationMaxMS", 125);
