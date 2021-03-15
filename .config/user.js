@@ -1,6 +1,6 @@
 // My preferences
 user_pref("browser.cache.disk.enable", false);
-user_pref("browser.cache.memory.capacity", 42000);
+user_pref("browser.cache.memory.capacity", 327680);
 user_pref("extensions.pocket.enabled", false);
 user_pref("full-screen-api.warning.timeout", 0);
 user_pref("gfx.canvas.azure.accelerated", true);
