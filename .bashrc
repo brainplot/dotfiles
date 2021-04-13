@@ -87,8 +87,8 @@ fi
 PS1+="\n${DL_CLR}\$${RT_CLR} "
 
 # fzf keybindings
-. /usr/share/doc/fzf/examples/completion.bash
-. /usr/share/doc/fzf/examples/key-bindings.bash
+[ -r ~/.local/share/fzf/completion.bash  ]  && . ~/.local/share/fzf/completion.bash
+[ -r ~/.local/share/fzf/key-bindings.bash ] && . ~/.local/share/fzf/key-bindings.bash
 
 # Clean-up
 unset {HN,UR,WD,AT,DL,VC,RT}_CLR
