@@ -32,3 +32,4 @@
 # Misc
 .wget-hsts
 .nvimlog
+.Xauthority
