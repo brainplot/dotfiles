@@ -33,3 +33,4 @@
 .wget-hsts
 .nvimlog
 .Xauthority
+.gtkrc-2.0
