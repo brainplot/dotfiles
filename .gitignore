@@ -20,7 +20,7 @@
 
 # Ignore ~/.git-prompt.sh and ~/.git-completion.sh symlinks
 .git-prompt.sh
-.git-completion.sh
+.git-completions.sh
 
 # Cloud platforms config data (created by Docker for Windows)
 .aws

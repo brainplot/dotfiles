@@ -25,6 +25,7 @@ shopt -s checkwinsize
 shopt -s direxpand
 
 # Aliases
+alias dot='git --git-dir="$HOME/.dot.git" --work-tree="$HOME"'
 alias la='ls -lhA'
 alias ll='ls -lh'
 alias ls='ls --color=auto'
@@ -94,6 +95,8 @@ if type -t __git_ps1 &>/dev/null || ( [ -r ~/.git-prompt.sh ] && . ~/.git-prompt
 	GIT_PS1_SHOWUPSTREAM=verbose
 	PS1+="${VC_CLR}\$(__git_ps1)${RT_CLR}"
 fi
+
+[ -r ~/.git-completions.sh ] && . ~/.git-completions.sh && __git_complete dot git
 
 PS1+="\n${DL_CLR}\$${RT_CLR} "
 
