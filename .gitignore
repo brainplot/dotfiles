@@ -34,3 +34,4 @@
 .nvimlog
 .Xauthority
 .gtkrc-2.0
+.fonts.conf
