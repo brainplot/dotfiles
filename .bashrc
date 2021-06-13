@@ -44,7 +44,7 @@ esac
 
 # Editor settings
 case "$TERM" in
-	xterm*|screen*)
+	xterm*|screen*|linux)
 		export EDITOR=nvim
 		export VISUAL="$EDITOR"
 		;;
