@@ -69,9 +69,6 @@ if [ -z "${force_color_prompt+x}" ]; then
 	fi
 fi
 
-# Disable blinking cursor if running in Windows Terminal
-[ -n "$WT_SESSION" ] && printf '\e[2 q'
-
 # To get a list of all supported colors, run the following command
 # for x in {0..8}; do for i in {30..37}; do for a in {40..47}; do echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "; done; echo; done; done; echo
 if [ "$color_prompt" = yes ]; then
@@ -83,6 +80,11 @@ if [ "$color_prompt" = yes ]; then
 	VC_CLR='\[\033[01;37m\]' # Version Control
 	RT_CLR='\[\033[00m\]'    # Reset all colors
 fi
+
+unset color_prompt force_color_prompt
+
+# Disable blinking cursor if running in Windows Terminal
+[ -n "$WT_SESSION" ] && printf '\e[2 q'
 
 PS1="\n${UR_CLR}\u${AT_CLR}@${HN_CLR}\h ${WD_CLR}\w${RT_CLR}"
 
