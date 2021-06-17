@@ -84,7 +84,7 @@ if [ "$color_prompt" = yes ]; then
 	RT_CLR='\[\033[00m\]'    # Reset all colors
 fi
 
-PS1="${UR_CLR}\u${AT_CLR}@${HN_CLR}\h ${WD_CLR}\w${RT_CLR}"
+PS1="\n${UR_CLR}\u${AT_CLR}@${HN_CLR}\h ${WD_CLR}\w${RT_CLR}"
 
 # Git prompt
 [ -r ~/.git-prompt.sh ] && . ~/.git-prompt.sh
