@@ -22,7 +22,8 @@
 	"editor.suggestSelection": "first",
 	"editor.tabCompletion": "on",
 	"files.associations": {
-		".dockerignore": "ignore"
+		".dockerignore": "ignore",
+		".terraform.lock.hcl": "tf"
 	},
 	"files.hotExit": "off",
 	"files.insertFinalNewline": true,
