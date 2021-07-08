@@ -1,6 +1,6 @@
 # Ignore everything but dotfiles
 *
-!.*
+!.**/*
 
 # Ignore .password-store since it's its own repo
 .password-store/
