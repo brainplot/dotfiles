@@ -1,4 +1,5 @@
 {
+	"diffEditor.renderSideBySide": false,
 	"editor.acceptSuggestionOnEnter": "off",
 	"editor.accessibilitySupport": "off",
 	"editor.copyWithSyntaxHighlighting": false,
