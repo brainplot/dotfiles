@@ -16,6 +16,9 @@
 	"editor.suggest.filterGraceful": false,
 	"editor.suggestSelection": "first",
 	"editor.tabCompletion": "on",
+	"files.associations": {
+		".dockerignore": "ignore"
+	},
 	"files.hotExit": "off",
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
