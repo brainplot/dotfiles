@@ -9,6 +9,7 @@
 	"editor.formatOnSave": true,
 	"editor.hideCursorInOverviewRuler": true,
 	"editor.largeFileOptimizations": false,
+	"editor.minimap.enabled": false,
 	"editor.quickSuggestionsDelay": 64,
 	"editor.renderLineHighlight": "gutter",
 	"editor.renderWhitespace": "selection",
