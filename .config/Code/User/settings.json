@@ -13,6 +13,9 @@
 	"editor.quickSuggestionsDelay": 64,
 	"editor.renderLineHighlight": "gutter",
 	"editor.renderWhitespace": "selection",
+	"editor.rulers": [
+		100
+	],
 	"editor.smoothScrolling": true,
 	"editor.suggest.filterGraceful": false,
 	"editor.suggestSelection": "first",
