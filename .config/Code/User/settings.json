@@ -40,6 +40,7 @@
 	"terminal.integrated.fontSize": 16,
 	"terminal.integrated.scrollback": 1024,
 	"update.mode": "manual",
+	"vim.enableNeovim": true,
 	"workbench.colorTheme": "GitHub Dark Default",
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.enableExperiments": false,
