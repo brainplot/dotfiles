@@ -33,6 +33,7 @@
 	"telemetry.enableCrashReporter": false,
 	"telemetry.enableTelemetry": false,
 	"terminal.explorerKind": "external",
+	"terminal.external.osxExec": "iTerm.app",
 	"terminal.integrated.fontSize": 16,
 	"terminal.integrated.scrollback": 1024,
 	"update.mode": "manual",
