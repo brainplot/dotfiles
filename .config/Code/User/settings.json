@@ -41,6 +41,7 @@
 	"terminal.integrated.scrollback": 1024,
 	"update.mode": "manual",
 	"vim.enableNeovim": true,
+	"vim.leader": " ",
 	"workbench.colorTheme": "GitHub Dark Default",
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.enableExperiments": false,
