@@ -36,6 +36,7 @@ alias nvimconfig='nvim "$XDG_CONFIG_HOME"/nvim/init.vim'
 alias gitconfig='"$EDITOR" "$HOME"/.gitconfig'
 alias tmuxconfig='"$EDITOR" "$HOME"/.tmux.conf'
 alias cdnvim='cd "$XDG_CONFIG_HOME"/nvim'
+alias nvim-update-plugins='nvim -c PlugUpgrade -c quitall && nvim -c PlugUpdate -c quitall'
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
