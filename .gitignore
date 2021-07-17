@@ -42,3 +42,6 @@
 
 # Ignore cache directory
 .cache
+
+# Ignore Kubernetes data
+.kube
