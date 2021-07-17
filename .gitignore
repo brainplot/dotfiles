@@ -52,3 +52,6 @@
 # GNUPG
 .gnupg/
 !.gnupg/gpg-agent.conf
+
+# Ignore user binaries
+.local/bin/
