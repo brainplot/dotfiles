@@ -48,3 +48,7 @@
 
 # Ignore dotfiles Git repo
 .dot.git
+
+# GNUPG
+.gnupg/
+!.gnupg/gpg-agent.conf
