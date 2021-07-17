@@ -2,6 +2,10 @@
 *
 !.**/*
 
+# Ignore everything but config files in the ~/.ssh folder
+.ssh/*
+!.ssh/config_*
+
 # Ignore .password-store since it's its own repo
 .password-store/
 
