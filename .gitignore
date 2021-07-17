@@ -45,3 +45,6 @@
 
 # Ignore Kubernetes data
 .kube
+
+# Ignore dotfiles Git repo
+.dot.git
