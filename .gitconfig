@@ -34,3 +34,7 @@
 	birdseye = %C(auto)%h%d% s %C(bold blue)<%aN> %C(green)(%cr)%Creset
 [init]
 	defaultBranch = main
+[tag]
+	sort = -version:refname
+[versionsort]
+	suffix = -
