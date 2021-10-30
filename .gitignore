@@ -49,7 +49,7 @@
 .dot.git
 
 # GNUPG
-.gnupg/
+.gnupg/*
 !.gnupg/gpg-agent.conf
 
 # Ignore user binaries
