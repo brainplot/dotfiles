@@ -6,6 +6,7 @@ case "$platform" in
 		;;
 	darwin*)
 		export XDG_CACHE_HOME="$HOME/Library/Caches"
+		eval "$(/opt/homebrew/bin/brew shellenv)"
 		;;
 esac
 
