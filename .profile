@@ -1,11 +1,7 @@
 platform="$(uname -s | tr '[:upper:]' '[:lower:]')"
 
-# XDG specifications
-# https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
-
 case "$platform" in
 	linux*)
-		# User directories
 		export XDG_CACHE_HOME="$HOME/.cache"
 		;;
 	darwin*)
