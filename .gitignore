@@ -1,6 +1,5 @@
-# Ignore everything but dotfiles
-*
-!.**/*
+# Ignore anything except for dotfiles
+/[^.]*
 
 # Ignore everything but config files in the ~/.ssh folder
 .ssh/*
