@@ -1,7 +1,3 @@
-#
-# ~/.profile
-#
-
 # XDG specifications
 # https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
 # User directories
