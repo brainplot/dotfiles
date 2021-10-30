@@ -1,7 +1,18 @@
+platform="$(uname -s | tr '[:upper:]' '[:lower:]')"
+
 # XDG specifications
 # https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
-# User directories
-export XDG_CACHE_HOME="$HOME/.cache"
+
+case "$platform" in
+	linux*)
+		# User directories
+		export XDG_CACHE_HOME="$HOME/.cache"
+		;;
+	darwin*)
+		export XDG_CACHE_HOME="$HOME/Library/Caches"
+		;;
+esac
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 
@@ -39,3 +50,6 @@ PATH="$XDG_DATA_HOME/node_modules/bin:$PATH"
 
 # Set user-wide paths to binaries and dynamically-linked libraries
 export PATH="$HOME/.local/bin:$PATH"
+
+# Cleanup
+unset platform
