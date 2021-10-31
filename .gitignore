@@ -54,3 +54,6 @@
 
 # Ignore user binaries
 .local/bin/
+
+# Ignored config
+.config/iterm2/
