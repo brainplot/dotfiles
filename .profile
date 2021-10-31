@@ -13,6 +13,9 @@ esac
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 
+# Make sure PATH is marked as exported
+export PATH
+
 # Set cargo location
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 PATH="$CARGO_HOME/bin:$PATH"
@@ -46,7 +49,7 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 PATH="$XDG_DATA_HOME/node_modules/bin:$PATH"
 
 # Set user-wide paths to binaries and dynamically-linked libraries
-export PATH="$HOME/.local/bin:$PATH"
+PATH="$HOME/.local/bin:$PATH"
 
 # Cleanup
 unset platform
