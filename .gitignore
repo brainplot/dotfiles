@@ -1,9 +1,9 @@
 # Ignore anything except for dotfiles
 /[^.]*
 
-# Ignore everything but config files in the ~/.ssh folder
+# Ignore anything but ~/.ssh/config
 .ssh/*
-!.ssh/config_*
+!.ssh/config
 
 # Ignore .password-store since it's its own repo
 .password-store/
