@@ -22,7 +22,7 @@ alias grep='grep --color=auto'
 alias tree="tree -I '.git|.hg|.svn'"
 alias bashconfig='"$EDITOR" "$HOME"/.bashrc'
 alias nvimconfig='nvim "$XDG_CONFIG_HOME"/nvim/init.vim'
-alias gitconfig='"$EDITOR" "$HOME"/.gitconfig'
+alias gitconfig='git config --global -e'
 alias tmuxconfig='"$EDITOR" "$HOME"/.tmux.conf'
 
 # Disable blinking cursor if running in Windows Terminal
