@@ -7,11 +7,12 @@ HISTCONTROL=ignoreboth
 GLOBIGNORE='.:..'
 
 # Automatically cd into directories, even if not prepended by cd
-shopt -s autocd
+[ "${BASH_VERSINFO[0]}" -ge 4 ] && shopt -s autocd
 # Check the window size after every command so that text wraps properly
 shopt -s checkwinsize
 # Complete environment variables
-shopt -s direxpand
+[ "${BASH_VERSINFO[0]}" -ge 4 ] && [ "${BASH_VERSINFO[1]}" -ge 3 ] ||
+[ "${BASH_VERSINFO[0]}" -ge 5 ] && shopt -s direxpand
 
 # To get a list of all supported colors, run the following command
 # for x in {0..8}; do for i in {30..37}; do for a in {40..47}; do echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "; done; echo; done; done; echo
