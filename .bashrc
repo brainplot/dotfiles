@@ -48,4 +48,10 @@ PS1+="\n${DL_CLR}\$${RT_CLR} "
 [ -r ~/.local/share/fzf/key-bindings.bash ] && . ~/.local/share/fzf/key-bindings.bash
 
 # Clean-up
-unset {HN,UR,WD,AT,DL,VC,RT}_CLR
+unset HN_CLR
+unset UR_CLR
+unset WD_CLR
+unset AT_CLR
+unset DL_CLR
+unset VC_CLR
+unset RT_CLR
