@@ -4,9 +4,6 @@ HISTCONTROL=ignoreboth
 # Exclude . and .. from .* expansion
 GLOBIGNORE='.:..'
 
-# Set the pseudo-tty for the gpg-agent
-export GPG_TTY=$(tty)
-
 # Automatically cd into directories, even if not prepended by cd
 shopt -s autocd
 # Check the window size after every command so that text wraps properly
