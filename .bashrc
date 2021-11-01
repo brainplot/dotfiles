@@ -27,9 +27,6 @@ then
 	RT_CLR='\[\033[00m\]'    # Reset all colors
 fi
 
-# Disable blinking cursor if running in Windows Terminal
-[ -n "$WT_SESSION" ] && printf '\e[2 q'
-
 PS1="\n${UR_CLR}\u${AT_CLR}@${HN_CLR}\h ${WD_CLR}\w${RT_CLR}"
 
 # Git prompt
