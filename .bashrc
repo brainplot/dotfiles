@@ -31,7 +31,8 @@ PS1="\n${UR_CLR}\u${AT_CLR}@${HN_CLR}\h ${WD_CLR}\w${RT_CLR}"
 # Git prompt
 [ -r ~/.git-prompt.sh ] && . ~/.git-prompt.sh
 
-if type __git_ps1 >/dev/null; then
+if type __git_ps1 >/dev/null 2>&1
+then
 	GIT_PS1_DESCRIBE_STYLE=branch
 	GIT_PS1_SHOWDIRTYSTATE=1
 	GIT_PS1_SHOWSTASHSTATE=1
