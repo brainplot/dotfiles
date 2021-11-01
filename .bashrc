@@ -1,3 +1,5 @@
+[ -e ~/.shrc ] && . ~/.shrc
+
 # Don't log duplicate commands on the command history
 HISTCONTROL=ignoreboth
 
