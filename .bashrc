@@ -14,30 +14,10 @@ shopt -s checkwinsize
 # Complete environment variables
 shopt -s direxpand
 
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-	xterm-color|*-256color) color_prompt=yes;;
-esac
-
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-#force_color_prompt=yes
-
-if [ -z "${force_color_prompt+x}" ]; then
-	if command -v tput >/dev/null && tput setaf 1 &>/dev/null; then
-		# We have color support; assume it's compliant with Ecma-48
-		# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-		# a case would tend to support setf rather than setaf.)
-		color_prompt=yes
-	else
-		color_prompt=
-	fi
-fi
-
 # To get a list of all supported colors, run the following command
 # for x in {0..8}; do for i in {30..37}; do for a in {40..47}; do echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "; done; echo; done; done; echo
-if [ "$color_prompt" = yes ]; then
+if [ -n "$CLICOLOR" ]
+then
 	HN_CLR='\[\033[01;36m\]' # Hostname
 	UR_CLR='\[\033[01;33m\]' # Username
 	WD_CLR='\[\033[01;34m\]' # Working directory
@@ -46,8 +26,6 @@ if [ "$color_prompt" = yes ]; then
 	VC_CLR='\[\033[01;37m\]' # Version Control
 	RT_CLR='\[\033[00m\]'    # Reset all colors
 fi
-
-unset color_prompt force_color_prompt
 
 # Disable blinking cursor if running in Windows Terminal
 [ -n "$WT_SESSION" ] && printf '\e[2 q'

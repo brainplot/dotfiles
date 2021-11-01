@@ -9,6 +9,12 @@ case "$TERM" in
 		;;
 esac
 
+case "$TERM" in
+	xterm-*color|screen-*color|tmux-*color)
+		export CLICOLOR=1
+		;;
+esac
+
 alias la='ls -lhA'
 alias ll='ls -lh'
 alias ls='ls --color=auto'
