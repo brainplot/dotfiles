@@ -15,7 +15,7 @@ shopt -s checkwinsize
 [ "${BASH_VERSINFO[0]}" -ge 5 ] && shopt -s direxpand
 
 # To get a list of all supported colors, run the following command
-# for x in {0..8}; do for i in {30..37}; do for a in {40..47}; do echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "; done; echo; done; done; echo
+# for x in {0..8}; do for i in {30..37}; do for a in {40..47}; do printf "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "; done; echo; done; done; echo
 if [ -n "$CLICOLOR" ]
 then
 	HN_CLR='\[\033[01;36m\]' # Hostname
