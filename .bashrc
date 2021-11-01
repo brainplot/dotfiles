@@ -1,9 +1,3 @@
-# If not running interactively, don't do anything
-case "$-" in
-	*i*) ;;
-	*) return
-esac
-
 # Don't log duplicate commands on the command history
 HISTCONTROL=ignoreboth
 
