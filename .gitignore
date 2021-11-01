@@ -57,3 +57,5 @@
 
 # Ignored config
 .config/iterm2/
+.config/nvim/
+.local/share/nvim/
