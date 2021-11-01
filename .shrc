@@ -2,6 +2,13 @@
 
 export GPG_TTY="$(tty)"
 
+case "$TERM" in
+	xterm*|screen*|linux)
+		export EDITOR=nvim
+		export VISUAL="$EDITOR"
+		;;
+esac
+
 alias la='ls -lhA'
 alias ll='ls -lh'
 alias ls='ls --color=auto'
