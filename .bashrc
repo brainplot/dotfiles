@@ -22,15 +22,6 @@ shopt -s direxpand
 
 # Aliases
 alias dot='git --git-dir="$HOME/.dot.git" --work-tree="$HOME"'
-alias la='ls -lhA'
-alias ll='ls -lh'
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias tree="tree -I '.git|.hg|.svn'"
-alias bashconfig='"$EDITOR" "$HOME"/.bashrc'
-alias nvimconfig='nvim "$XDG_CONFIG_HOME"/nvim/init.vim'
-alias gitconfig='"$EDITOR" "$HOME"/.gitconfig'
-alias tmuxconfig='"$EDITOR" "$HOME"/.tmux.conf'
 alias cdnvim='cd "$XDG_CONFIG_HOME"/nvim'
 alias nvim-update-plugins='nvim -c PlugUpgrade -c quitall && nvim -c PlugUpdate -c quitall'
 
