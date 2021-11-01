@@ -20,11 +20,6 @@ shopt -s checkwinsize
 # Complete environment variables
 shopt -s direxpand
 
-# Aliases
-alias dot='git --git-dir="$HOME/.dot.git" --work-tree="$HOME"'
-alias cdnvim='cd "$XDG_CONFIG_HOME"/nvim'
-alias nvim-update-plugins='nvim -c PlugUpgrade -c quitall && nvim -c PlugUpdate -c quitall'
-
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
 	xterm-color|*-256color) color_prompt=yes;;
@@ -87,8 +82,6 @@ if type __git_ps1 >/dev/null; then
 	GIT_PS1_SHOWUPSTREAM=verbose
 	PS1+="${VC_CLR}\$(__git_ps1)${RT_CLR}"
 fi
-
-[ -r ~/.git-completions.sh ] && . ~/.git-completions.sh && __git_complete dot git
 
 PS1+="\n${DL_CLR}\$${RT_CLR} "
 
