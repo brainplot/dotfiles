@@ -29,7 +29,7 @@ fi
 PS1="\n${UR_CLR}\u${AT_CLR}@${HN_CLR}\h ${WD_CLR}\w${RT_CLR}"
 
 # Git prompt
-[ -r ~/.git-prompt.sh ] && . ~/.git-prompt.sh
+[ -e ~/.git-prompt.sh ] && . ~/.git-prompt.sh
 
 if type __git_ps1 >/dev/null 2>&1
 then
@@ -44,8 +44,8 @@ fi
 PS1+="\n${DL_CLR}\$${RT_CLR} "
 
 # fzf keybindings
-[ -r ~/.local/share/fzf/completion.bash  ]  && . ~/.local/share/fzf/completion.bash
-[ -r ~/.local/share/fzf/key-bindings.bash ] && . ~/.local/share/fzf/key-bindings.bash
+[ -e ~/.local/share/fzf/completion.bash ] && . ~/.local/share/fzf/completion.bash
+[ -e ~/.local/share/fzf/key-bindings.bash ] && . ~/.local/share/fzf/key-bindings.bash
 
 # Clean-up
 unset HN_CLR
