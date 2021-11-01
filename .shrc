@@ -21,6 +21,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias tree="tree -I '.git|.hg|.svn'"
 alias bashconfig='"$EDITOR" "$HOME"/.bashrc'
+alias zshconfig='"$EDITOR" "$HOME"/.zshrc'
 alias nvimconfig="nvim -c 'edit \$MYVIMRC'"
 alias gitconfig='git config --global -e'
 alias tmuxconfig='"$EDITOR" "$HOME"/.tmux.conf'
