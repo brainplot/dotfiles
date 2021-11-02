@@ -54,6 +54,9 @@ autoload -Uz +X bashcompinit && bashcompinit
 # https://stackoverflow.com/a/24237590
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
+terraform_full_path="$(command -v terraform)" &&
+complete -o nospace -C "$terraform_full_path" terraform
+
 # Make alt-backspace behave like Bash
 autoload -Uz select-word-style
 select-word-style bash
@@ -69,3 +72,6 @@ autoload -Uz promptinit && promptinit
 # Custom theme
 prompt powerlevel10k
 [ -e ~/.p10k.zsh ] && . ~/.p10k.zsh
+
+# Clean-up
+unset terraform_full_path
