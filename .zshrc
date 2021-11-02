@@ -1,3 +1,9 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+[ -e "$XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh" ] &&
+. "$XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh"
+
 [ -e ~/.shrc ] && emulate sh -c '. ~/.shrc'
 
 # Make PATH and FPATH unique sets
@@ -15,6 +21,7 @@ fpath+=(
 # Add user-specific folder to the shell's search path
 fpath+=(
 	"$XDG_DATA_HOME"/zsh/site-functions
+	"$XDG_DATA_HOME"/zsh/plugins/*
 )
 
 # Emacs keys
@@ -58,3 +65,7 @@ bindkey "^X^E" edit-command-line
 
 # Prompt
 autoload -Uz promptinit && promptinit
+
+# Custom theme
+prompt powerlevel10k
+[ -e ~/.p10k.zsh ] && . ~/.p10k.zsh
