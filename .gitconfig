@@ -21,7 +21,7 @@
 		git clone git@github.com:desotech-it/\"$repo\".git \"$@\" && \
 		git -C \"$repo\" desotech"
 	desotech = !git config --local user.email g.recchia@desotech.it && git config --local commit.gpgSign false
-	initial-commit = commit -m 'Initial commit'
+	ic = commit -m 'Initial commit'
 [url "git@github.com:"]
 	insteadOf = gh:
 [url "git@gitlab.com:"]
