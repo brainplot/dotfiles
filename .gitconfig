@@ -16,9 +16,8 @@
 	dance = !git add -A && git commit -m 'Initial commit'
 	psu = !git push -u "${1:-origin}" "$(git rev-parse --abbrev-ref HEAD)"
 	root = rev-parse --show-toplevel
-	dsclone = "!repo=\"$1\" && \
-		shift && \
-		git clone git@github.com:desotech-it/\"$repo\".git \"$@\" && \
+	dsclone = "!repo=\"$1\" && shift && \
+		git clone \"$@\" git@github.com:desotech-it/\"$repo\".git \"$(printf \"$repo\" | awk '{ print tolower($0) }')\" && \
 		git -C \"$repo\" desotech"
 	desotech = !git config --local user.email g.recchia@desotech.it && git config --local commit.gpgSign false
 	ic = commit -m 'Initial commit'
