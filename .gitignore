@@ -2,64 +2,64 @@
 /[^.]*
 
 # Ignore anything but ~/.ssh/config
-.ssh/*
-!.ssh/config
+/.ssh/*
+!/.ssh/config
 
 # Zsh
-.zcomp*
-.local/share/zsh/plugins/
+/.zcomp*
+/.local/share/zsh/plugins/
 
 # Ignore .password-store since it's its own repo
-.password-store/
+/.password-store/
 
 # History files
 .*_history
 
 # WSL artifacts
-.hushlogin
-.motd_shown
-.sudo_as_admin_successful
+/.hushlogin
+/.motd_shown
+/.sudo_as_admin_successful
 
 # Vim stuff
-.vim
-.viminfo
-.vimrc
+/.vim
+/.viminfo
+/.vimrc
 
 # Ignore ~/.git-prompt.sh and ~/.git-completion.sh symlinks
-.git-prompt.sh
-.git-completions.sh
+/.git-prompt.sh
+/.git-completions.sh
 
 # Cloud platforms config data (created by Docker for Windows)
-.aws
-.azure
+/.aws
+/.azure
 
 # Docker stuff
-.docker/
+/.docker/
 
 # Misc
-.wget-hsts
-.nvimlog
-.Xauthority
-.gtkrc-2.0
-.fonts.conf
+/.wget-hsts
+/.nvimlog
+/.Xauthority
+/.gtkrc-2.0
+/.fonts.conf
 
 # Ignore cache directory
-.cache
+/.cache
 
 # Ignore Kubernetes data
-.kube
+/.kube
 
 # Ignore dotfiles Git repo
-.dot.git
+/.dot.git
 
 # GNUPG
-.gnupg/*
-!.gnupg/gpg-agent.conf
+/.gnupg/*
+!/.gnupg/gpg-agent.conf
 
 # Ignore user binaries
-.local/bin/
+/.local/bin/
 
 # Ignored config
-.config/iterm2/
-.config/nvim/
-.local/share/nvim/
+/.config/iterm2/
+/.config/nvim/
+/.local/share/nvim/
