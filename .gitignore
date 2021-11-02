@@ -5,6 +5,10 @@
 .ssh/*
 !.ssh/config
 
+# Zsh
+.zcomp*
+.local/share/zsh/plugins/
+
 # Ignore .password-store since it's its own repo
 .password-store/
 
