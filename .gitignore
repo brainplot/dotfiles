@@ -60,6 +60,8 @@
 /.local/bin/
 
 # Ignored config
+/.anyconnect
+/.cisco/
 /.config/iterm2/
 /.config/nvim/
 /.local/share/nvim/
