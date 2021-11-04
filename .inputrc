@@ -21,3 +21,8 @@ set visible-stats on
 
 # Disable bell sound
 set bell-style none
+
+# Bracketed paste pastes control characters as-is without intepreting them
+# Useful when pasting commands that contain a new-line character at the end as they won't be
+# executed upon paste
+set enable-bracketed-paste on
