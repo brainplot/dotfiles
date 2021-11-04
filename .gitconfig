@@ -13,7 +13,6 @@
 	lol = log --graph --pretty=birdseye
 	pristine = !git reset --hard && git clean -fdx
 	squeeze = !git reflog expire --all --expire=now && git gc --prune=now --aggressive
-	dance = !git add -A && git commit -m 'Initial commit'
 	psu = !git push -u "${1:-origin}" "$(git rev-parse --abbrev-ref HEAD)"
 	root = rev-parse --show-toplevel
 	dsclone = "!repo=\"$1\" && shift && \
