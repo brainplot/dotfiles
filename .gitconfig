@@ -26,6 +26,7 @@
 	caan = commit -a --amend --no-edit
 	pp = push
 	pl = pull
+	package = !git bundle create ../\"$(basename \"$(git rev-parse --show-toplevel)\")\".bundle --all
 [url "git@github.com:"]
 	insteadOf = gh:
 [url "git@gitlab.com:"]
