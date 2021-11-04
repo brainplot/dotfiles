@@ -46,6 +46,11 @@ setopt interactivecomments
 # and & or | are typed
 ZLE_SPACE_SUFFIX_CHARS='&|'
 
+# Eat space preceding these characters. The `)` is especially handy: it allows to type
+# `file "$(which some_com<TAB> )"` and have the `)` eat up the space before it, resulting in
+# `file "$(which some_command)"`
+ZLE_REMOVE_SUFFIX_CHARS=$' \t\n;)'
+
 # Completion
 autoload -Uz compinit && compinit
 autoload -Uz +X bashcompinit && bashcompinit
