@@ -9,7 +9,7 @@
 	autocrlf = input
 	pager = less -x1,5
 [alias]
-	ignore = !curl -sLw '\n' "https://www.toptal.com/developers/gitignore/api/$(echo $@ | tr -s [:blank:] ,)"
+	ignore = !curl -sLw $'\\n' https://www.toptal.com/developers/gitignore/api/\"$(echo $@ | tr -s '[:blank:]' ,)\"
 	lol = log --graph --pretty=birdseye
 	pristine = !git reset --hard && git clean -fdx
 	squeeze = !git reflog expire --all --expire=now && git gc --prune=now --aggressive
