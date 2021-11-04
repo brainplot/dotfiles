@@ -66,4 +66,5 @@
 /.config/nvim/
 /.config/htop/
 /.local/share/nvim/
+/.local/share/go/
 /.terraform.d/
