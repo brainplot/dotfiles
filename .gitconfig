@@ -24,6 +24,8 @@
 	add-file = !git add -- \"$1\" && git commit -m \"Add \\`$1\\`\" -- \"$1\"
 	can = commit --amend --no-edit
 	caan = commit -a --amend --no-edit
+	pp = push
+	pl = pull
 [url "git@github.com:"]
 	insteadOf = gh:
 [url "git@gitlab.com:"]
