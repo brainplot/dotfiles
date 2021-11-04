@@ -64,5 +64,6 @@
 /.cisco/
 /.config/iterm2/
 /.config/nvim/
+/.config/htop/
 /.local/share/nvim/
 /.terraform.d/
