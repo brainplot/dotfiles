@@ -22,6 +22,8 @@
 	ic = commit -m 'Initial commit'
 	update-file = !git commit -m \"Update \\`$1\\`\" -- \"$1\"
 	add-file = !git add -- \"$1\" && git commit -m \"Add \\`$1\\`\" -- \"$1\"
+	can = commit --amend --no-edit
+	caan = commit -a --amend --no-edit
 [url "git@github.com:"]
 	insteadOf = gh:
 [url "git@gitlab.com:"]
