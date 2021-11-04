@@ -16,6 +16,9 @@ export XDG_DATA_HOME="$HOME/.local/share"
 # Make sure PATH is marked as exported
 export PATH
 
+# Python user site
+user_site="$(python3 -m site --user-base)" && PATH="$user_site/bin:$PATH"
+
 # Set cargo location
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 PATH="$CARGO_HOME/bin:$PATH"
@@ -58,3 +61,4 @@ PATH="$HOME/.local/bin:$PATH"
 # Cleanup
 unset platform
 unset cpu_count
+unset user_site
