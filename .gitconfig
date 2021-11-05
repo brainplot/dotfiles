@@ -21,7 +21,7 @@
 	desotech = !git config --local user.email g.recchia@desotech.it && git config --local commit.gpgSign false
 	ic = commit -m 'Initial commit'
 	update-file = !git commit -m \"Update \\`$1\\`\" -- \"$1\"
-	add-file = !git add -- \"$1\" && git commit -m \"Add \\`$1\\`\" -- \"$1\"
+	add-file = !git add -- \"$1\" && git commit -m \"Add \\`$1\\`\"
 	can = commit --amend --no-edit
 	caan = commit -a --amend --no-edit
 	pp = push
