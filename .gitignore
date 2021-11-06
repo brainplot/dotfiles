@@ -68,3 +68,4 @@
 /.local/share/nvim/
 /.local/share/go/
 /.terraform.d/
+/.local/share/fzf/
