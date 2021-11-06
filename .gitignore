@@ -69,3 +69,7 @@
 /.local/share/go/
 /.terraform.d/
 /.local/share/fzf/
+
+
+# Powerlevel10k config
+/.p10k.zsh
