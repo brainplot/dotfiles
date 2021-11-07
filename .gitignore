@@ -69,7 +69,8 @@
 /.local/share/go/
 /.terraform.d/
 /.local/share/fzf/
-
+/.local/share/cargo/*
+!/.local/share/cargo/config.toml
 
 # Powerlevel10k config
 /.p10k.zsh
