@@ -71,6 +71,8 @@
 /.local/share/fzf/
 /.local/share/cargo/*
 !/.local/share/cargo/config.toml
+/.bundle/
+/.gem/
 
 # Powerlevel10k config
 /.p10k.zsh
