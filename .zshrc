@@ -59,6 +59,10 @@ autoload -Uz +X bashcompinit && bashcompinit
 # https://stackoverflow.com/a/24237590
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
+# Fall back to completing just files if everything else fails
+# https://zsh.sourceforge.io/FAQ/zshfaq04.html
+zstyle ':completion:*' completer _complete _ignored _files
+
 terraform_full_path="$(command -v terraform)" &&
 complete -o nospace -C "$terraform_full_path" terraform
 
