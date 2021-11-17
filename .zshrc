@@ -33,6 +33,11 @@ bindkey \^U backward-kill-line
 # Prepending cd to directories becomes optional
 setopt autocd
 
+# History file
+HISTFILE="${ZDOTDIR:-$HOME}"/.zsh_history
+HISTSIZE=2000
+SAVEHIST="$HISTSIZE"
+
 # Only keep the most recent version of a full command in the history
 setopt histignorealldups
 
