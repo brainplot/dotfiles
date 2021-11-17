@@ -47,6 +47,18 @@ setopt histignorespace
 # Allow comments in interactive sessions
 setopt interactivecomments
 
+# Treat the '!' character specially during expansion. (e.g. sudo !!)
+setopt banghist
+
+# Do not display a line previously found when searching history with CTLR+R
+setopt histfindnodups
+
+# Remove superfluous blanks before recording entry
+setopt histreduceblanks
+
+# Don't execute immediately upon history expansion
+setopt histverify
+
 # Prevent the shell from eating up the previous space when a command has been autocompleted
 # and & or | are typed
 ZLE_SPACE_SUFFIX_CHARS='&|'
