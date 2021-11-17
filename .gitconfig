@@ -42,6 +42,4 @@
 [init]
 	defaultBranch = main
 [tag]
-	sort = -version:refname
-[versionsort]
-	suffix = -
+	sort = -creatordate
