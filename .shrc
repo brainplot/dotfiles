@@ -26,6 +26,7 @@ alias nvimconfig="nvim -c 'edit \$MYVIMRC'"
 alias nvimsync="nvim --headless -c 'autocmd User PackerComplete quitall' -c PackerSync"
 alias gitconfig='git config --global -e'
 alias tmuxconfig='"$EDITOR" "$HOME"/.tmux.conf'
+alias dot='git --git-dir="$HOME/.dot.git" --work-tree="$HOME"'
 
 # Disable blinking cursor if running in Windows Terminal
 [ -n "$WT_SESSION" ] && printf '\e[2 q'
