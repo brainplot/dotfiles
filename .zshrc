@@ -83,6 +83,9 @@ zstyle ':completion:*' completer _complete _ignored _files
 cmd_full_path="$(command -v terraform)" &&
 complete -o nospace -C "$cmd_full_path" terraform
 
+cmd_full_path="$(command -v vault)" &&
+complete -o nospace -C "$cmd_full_path" vault
+
 # Make alt-backspace behave like Bash
 autoload -Uz select-word-style
 select-word-style bash
