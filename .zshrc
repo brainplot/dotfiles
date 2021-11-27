@@ -80,8 +80,8 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 # https://zsh.sourceforge.io/FAQ/zshfaq04.html
 zstyle ':completion:*' completer _complete _ignored _files
 
-terraform_full_path="$(command -v terraform)" &&
-complete -o nospace -C "$terraform_full_path" terraform
+cmd_full_path="$(command -v terraform)" &&
+complete -o nospace -C "$cmd_full_path" terraform
 
 # Make alt-backspace behave like Bash
 autoload -Uz select-word-style
@@ -100,4 +100,4 @@ prompt powerlevel10k
 [ -e ~/.p10k.zsh ] && . ~/.p10k.zsh
 
 # Clean-up
-unset terraform_full_path
+unset cmd_full_path
