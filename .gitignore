@@ -65,6 +65,7 @@
 /.config/iterm2/
 /.config/nvim/
 /.config/htop/
+/.config/wireshark/
 /.local/share/nvim/
 /.local/share/go/
 /.terraform.d/
