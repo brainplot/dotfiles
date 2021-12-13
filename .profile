@@ -3,6 +3,9 @@ platform="$(uname -s | tr '[:upper:]' '[:lower:]')"
 # Make sure PATH is marked as exported
 export PATH
 
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+
 case "$platform" in
 	linux*)
 		export XDG_CACHE_HOME="$HOME/.cache"
@@ -12,9 +15,6 @@ case "$platform" in
 		eval "$(/opt/homebrew/bin/brew shellenv)"
 		;;
 esac
-
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
 
 # Python user site
 user_site="$(python3 -m site --user-base)" && PATH="$user_site/bin:$PATH"
