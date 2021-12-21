@@ -7,6 +7,7 @@
 
 # Zsh
 /.zcomp*
+/.zsh_sessions/
 /.local/share/zsh/plugins/
 
 # Ignore .password-store since it's its own repo
