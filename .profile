@@ -13,6 +13,7 @@ case "$platform" in
 	darwin*)
 		export XDG_CACHE_HOME="$HOME/Library/Caches"
 		eval "$(/opt/homebrew/bin/brew shellenv)"
+		PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"
 		;;
 esac
 
