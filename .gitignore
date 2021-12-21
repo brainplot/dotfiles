@@ -79,3 +79,6 @@
 
 # Powerlevel10k config
 /.p10k.zsh
+
+# HashiCorp Vault token
+/.vault-token
