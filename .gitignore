@@ -73,6 +73,7 @@
 /.local/share/cargo/*
 /.local/share/fzf/
 /.local/share/go/
+/.local/share/mkcert/
 /.local/share/nvim/
 /.terraform.d/
 
