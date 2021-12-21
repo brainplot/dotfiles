@@ -86,6 +86,12 @@ complete -o nospace -C "$cmd_full_path" terraform
 cmd_full_path="$(command -v vault)" &&
 complete -o nospace -C "$cmd_full_path" vault
 
+# Kuberentes
+command -v kubectl >/dev/null &&
+. <(kubectl completion zsh) &&
+alias k=kubectl &&
+compdef __start_kubectl k
+
 # Make alt-backspace behave like Bash
 autoload -Uz select-word-style
 select-word-style bash
