@@ -61,20 +61,20 @@
 /.local/bin/
 
 # Ignored config
+!/.local/share/cargo/config.toml
 /.anyconnect
+/.bundle/
 /.cisco/
+/.config/htop/
 /.config/iterm2/
 /.config/nvim/
-/.config/htop/
 /.config/wireshark/
-/.local/share/nvim/
-/.local/share/go/
-/.terraform.d/
-/.local/share/fzf/
-/.local/share/cargo/*
-!/.local/share/cargo/config.toml
-/.bundle/
 /.gem/
+/.local/share/cargo/*
+/.local/share/fzf/
+/.local/share/go/
+/.local/share/nvim/
+/.terraform.d/
 
 # Powerlevel10k config
 /.p10k.zsh
