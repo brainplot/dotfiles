@@ -80,6 +80,7 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 # https://zsh.sourceforge.io/FAQ/zshfaq04.html
 zstyle ':completion:*' completer _complete _ignored _files
 
+# HashiCorp tools
 cmd_full_path="$(command -v terraform)" &&
 complete -o nospace -C "$cmd_full_path" terraform
 
