@@ -86,6 +86,9 @@ complete -o nospace -C "$cmd_full_path" terraform
 cmd_full_path="$(command -v vault)" &&
 complete -o nospace -C "$cmd_full_path" vault
 
+cmd_full_path="$(command -v packer)" &&
+complete -o nospace -C "$cmd_full_path" packer
+
 # Kuberentes
 command -v kubectl >/dev/null &&
 . <(kubectl completion zsh) &&
