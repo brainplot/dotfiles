@@ -65,6 +65,7 @@
 /.anyconnect
 /.bundle/
 /.cisco/
+/.config/helm/
 /.config/htop/
 /.config/iterm2/
 /.config/nvim/
