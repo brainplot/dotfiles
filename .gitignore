@@ -68,6 +68,7 @@
 /.config/htop/
 /.config/iterm2/
 /.config/nvim/
+/.config/packer/
 /.config/wireshark/
 /.gem/
 /.local/share/cargo/*
