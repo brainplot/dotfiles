@@ -10,6 +10,9 @@
 /.zsh_sessions/
 /.local/share/zsh/plugins/
 
+# Completion scripts
+_*
+
 # Ignore .password-store since it's its own repo
 /.password-store/
 
