@@ -84,3 +84,6 @@
 
 # HashiCorp Vault token
 /.vault-token
+
+# zsh-z
+/.z

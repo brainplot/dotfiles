@@ -112,5 +112,8 @@ autoload -Uz promptinit && promptinit
 prompt powerlevel10k
 [ -e ~/.p10k.zsh ] && . ~/.p10k.zsh
 
+# Plugins
+. "$XDG_DATA_HOME"/zsh/plugins/zsh-z/zsh-z.plugin.zsh
+
 # Clean-up
 unset cmd_full_path
