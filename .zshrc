@@ -11,12 +11,14 @@ typeset -U PATH path
 typeset -U FPATH fpath
 
 # Add Homebrew stuff to the shell's search path, if it's installed
-[ -n "$HOMEBREW_PREFIX" ] &&
-fpath+=(
-	"$HOMEBREW_PREFIX"/completions/zsh
-	"$HOMEBREW_PREFIX"/share/zsh/site-functions
-	"$HOMEBREW_PREFIX"/share/zsh-completions
-)
+if [ -n "$HOMEBREW_PREFIX" ]
+then
+	fpath+=(
+		"$HOMEBREW_PREFIX"/completions/zsh
+		"$HOMEBREW_PREFIX"/share/zsh/site-functions
+		"$HOMEBREW_PREFIX"/share/zsh-completions
+	)
+fi
 
 # Add user-specific folder to the shell's search path
 fpath+=(
