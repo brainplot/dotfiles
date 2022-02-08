@@ -29,7 +29,7 @@
 	package = !git bundle create ../\"$(basename \"$(git rev-parse --show-toplevel)\")\".bundle --all
 	license = "!license() { curl -sS -H 'Accept: application/vnd.github.v3+json' https://api.github.com/licenses/\"$1\" | jq -r .body ; }; license"
 	latest = !git tag --sort=-creatordate | head -n1 | xargs -r git -c advice.detachedHead=false checkout
-	ignore-file = "!ignore_file() { echo \"/$1\" >>.git/info/exclude ; }; ignore_file"
+	ignore-file = "!ignore_file() { echo \"$1\" >>.git/info/exclude ; }; ignore_file"
 [url "git@github.com:"]
 	insteadOf = gh:
 [url "git@gitlab.com:"]
