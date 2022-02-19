@@ -6,3 +6,4 @@ rustflags = [
 [alias]
 rr = "run --release"
 tr = "test --release"
+d = "doc --no-deps"
