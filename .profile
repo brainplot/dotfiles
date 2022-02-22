@@ -1,5 +1,8 @@
 platform="$(uname -s | tr '[:upper:]' '[:lower:]')"
 
+# Set default locale
+[ -z "$LANG" ] && export LANG=en_US.UTF-8
+
 # Make sure PATH is marked as exported
 export PATH
 
