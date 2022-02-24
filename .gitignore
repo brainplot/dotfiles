@@ -80,6 +80,7 @@ _*
 /.local/share/go/
 /.local/share/mkcert/
 /.local/share/nvim/
+/.local/share/tmux/
 /.terraform.d/
 
 # Powerlevel10k config
