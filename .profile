@@ -17,6 +17,7 @@ case "$platform" in
 		export XDG_CACHE_HOME="$HOME/Library/Caches"
 		eval "$(/opt/homebrew/bin/brew shellenv)"
 		PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"
+		PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 		;;
 esac
 
