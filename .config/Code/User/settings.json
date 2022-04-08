@@ -5,6 +5,7 @@
 	"editor.copyWithSyntaxHighlighting": false,
 	"editor.cursorBlinking": "phase",
 	"editor.fontFamily": "'Rec Mono Linear', Hack, Menlo, Monaco, 'Courier New', monospace",
+	"editor.emptySelectionClipboard": false,
 	"editor.fontSize": 15,
 	"editor.formatOnSave": true,
 	"editor.hideCursorInOverviewRuler": true,
