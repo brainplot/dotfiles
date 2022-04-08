@@ -68,6 +68,7 @@ _*
 /.anyconnect
 /.bundle/
 /.cisco/
+/.config/Code/
 /.config/helm/
 /.config/htop/
 /.config/iterm2/
