@@ -8,6 +8,7 @@
 	"editor.fontSize": 15,
 	"editor.formatOnSave": true,
 	"editor.hideCursorInOverviewRuler": true,
+	"editor.insertSpaces": false,
 	"editor.largeFileOptimizations": false,
 	"editor.lineNumbers": "relative",
 	"editor.minimap.enabled": false,
