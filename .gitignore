@@ -92,3 +92,6 @@ _*
 
 # zsh-z
 /.z
+
+# irssi folder
+/.irssi/
