@@ -95,3 +95,6 @@ _*
 
 # irssi folder
 /.irssi/
+
+# VSCode folder
+/.vscode/
