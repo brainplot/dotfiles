@@ -1,6 +1,7 @@
 #!/bin/sh
 
-export GPG_TTY="$(tty)"
+gpg_tty="$(tty)" && export GPG_TTY="$gpg_tty"
+unset gpg_tty
 
 case "$TERM" in
 	xterm*|screen*|linux)
