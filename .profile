@@ -29,6 +29,10 @@ user_site="$(python3 -m site --user-base)" && PATH="$user_site/bin:$PATH"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 PATH="$CARGO_HOME/bin:$PATH"
 
+# Set rustup location
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+PATH="$RUSTUP_HOME/bin:$PATH"
+
 # Set Golang local repository
 export GOPATH="$XDG_DATA_HOME/go"
 PATH="$GOPATH/bin:$PATH"
