@@ -98,3 +98,7 @@ _*
 
 # VSCode folder
 /.vscode/
+
+# Gradle
+/.local/share/gradle/
+/.gradle/
