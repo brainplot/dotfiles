@@ -39,6 +39,7 @@ setopt autocd
 HISTFILE="${ZDOTDIR:-$HOME}"/.zsh_history
 HISTSIZE=2000
 SAVEHIST="$HISTSIZE"
+HISTORY_IGNORE='*AWS_SECRET_ACCESS_KEY=*'
 
 # Only keep the most recent version of a full command in the history
 setopt histignorealldups
