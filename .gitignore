@@ -106,3 +106,6 @@ _*
 
 # Maven
 /.m2/
+
+# LLDB
+/.lldb/
