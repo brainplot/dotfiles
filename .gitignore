@@ -81,6 +81,7 @@ _*
 /.local/share/go/
 /.local/share/mkcert/
 /.local/share/nvim/
+/.local/share/rustup/
 /.local/share/tmux/
 /.terraform.d/
 
