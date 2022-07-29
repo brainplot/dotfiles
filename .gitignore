@@ -102,3 +102,6 @@ _*
 # Gradle
 /.local/share/gradle/
 /.gradle/
+
+# Maven
+/.m2/
