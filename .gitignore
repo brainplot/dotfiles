@@ -109,3 +109,6 @@ _*
 
 # LLDB
 /.lldb/
+
+# WireGuard
+/.vpn/
