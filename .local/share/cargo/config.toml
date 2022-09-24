@@ -6,4 +6,5 @@ rustflags = [
 [alias]
 rr = "run --release"
 tr = "test --release"
+to = "test -- --nocapture"
 d = "doc --no-deps"
