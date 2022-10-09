@@ -53,9 +53,6 @@ fi
 export ANDROID_SDK_ROOT="$XDG_DATA_HOME/android-sdk"
 PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
 
-# Alternate location for Gradle's data
-export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
-
 # Alternate location for less's config file and cache and default options
 export LESS=-FR5
 export LESSKEY="$XDG_CONFIG_HOME/less/lesskey"
