@@ -31,3 +31,13 @@ alias dot='git --git-dir="$HOME/.dot.git" --work-tree="$HOME"'
 
 # Disable blinking cursor if running in Windows Terminal
 [ -n "$WT_SESSION" ] && printf '\e[2 q'
+
+# Functions
+source_aws_credentials_from_csv() {
+	if [ "$#" -lt 1 ]
+	then
+		echo fatal: no CSV file provided >&2
+	else
+		eval "$(awk -F, 'FNR==2 { printf "export AWS_ACCESS_KEY_ID=%s AWS_SECRET_ACCESS_KEY=%s", $3, $4 }' "$1")"
+	fi
+}
