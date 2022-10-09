@@ -88,6 +88,9 @@ _*
 /.local/share/tmux/
 /.terraform.d/
 
+# State folder
+/.local/state/
+
 # Powerlevel10k config
 /.p10k.zsh
 
