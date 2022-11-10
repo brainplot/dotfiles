@@ -1,4 +1,8 @@
+" General
 set number
 set relativenumber
-set commentary
 set ideajoin
+
+" Plugins
+set surround
+set commentary
