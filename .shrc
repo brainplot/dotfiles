@@ -41,3 +41,12 @@ source_aws_credentials_from_csv() {
 		eval "$(awk -F, 'FNR==2 { printf "export AWS_ACCESS_KEY_ID=%s AWS_SECRET_ACCESS_KEY=%s", $3, $4 }' "$1")"
 	fi
 }
+
+renumber() {
+	new_number="$(printf '%02d' "$2")"
+	file_wo_number="${1#*.}"
+	if [ "$1" != "$file_wo_number" ]
+	then
+		mv -v -- "$1" "$new_number"."$file_wo_number"
+	fi
+}
