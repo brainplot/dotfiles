@@ -78,6 +78,7 @@ _*
 /.config/nvim/
 /.config/packer/
 /.config/wireshark/
+/.config/zed/
 /.gem/
 /.local/share/cargo/*
 /.local/share/fzf/
