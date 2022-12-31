@@ -57,7 +57,7 @@ _*
 /.kube
 
 # Ignore dotfiles Git repo
-/.dot.git
+/.dotfiles.git
 
 # GNUPG
 /.gnupg/*
