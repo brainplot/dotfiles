@@ -24,6 +24,14 @@ case "$platform" in
 		;;
 esac
 
+# Set the default number of jobs used by `cmake --build` and `ctest`
+# https://stackoverflow.com/a/23569003
+if cpu_count="$(getconf _NPROCESSORS_ONLN)"
+then
+	export CMAKE_BUILD_PARALLEL_LEVEL="$(($cpu_count+2))"
+	export CTEST_PARALLEL_LEVEL="$CMAKE_BUILD_PARALLEL_LEVEL"
+fi
+
 # Python user site
 user_site="$(python3 -m site --user-base)" && prepend_dir_to_path_if_exists "$user_site/bin"
 
@@ -42,14 +50,6 @@ prepend_dir_to_path_if_exists "$GOPATH/bin"
 # Set up composer installation
 export COMPOSER_HOME="$XDG_DATA_HOME/composer"
 prepend_dir_to_path_if_exists "$COMPOSER_HOME/vendor/bin"
-
-# Set the default number of jobs used by `cmake --build` and `ctest`
-# https://stackoverflow.com/a/23569003
-if cpu_count="$(getconf _NPROCESSORS_ONLN)"
-then
-	export CMAKE_BUILD_PARALLEL_LEVEL="$(($cpu_count+2))"
-	export CTEST_PARALLEL_LEVEL="$CMAKE_BUILD_PARALLEL_LEVEL"
-fi
 
 # Set the root of the Android SDK for proper detection in Android Studio
 export ANDROID_SDK_ROOT="$XDG_DATA_HOME/android-sdk"
