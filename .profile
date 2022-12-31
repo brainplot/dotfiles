@@ -6,6 +6,8 @@ platform="$(uname -s | tr '[:upper:]' '[:lower:]')"
 # Make sure PATH is marked as exported
 export PATH
 
+prepend_dir_to_path_if_exists() { [ -d "$1" ] && PATH="$d:$PATH" ; }
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
@@ -17,29 +19,29 @@ case "$platform" in
 	darwin*)
 		export XDG_CACHE_HOME="$HOME/Library/Caches"
 		eval "$(/opt/homebrew/bin/brew shellenv)"
-		PATH="$HOMEBREW_PREFIX/opt/python@3.11/libexec/bin:$PATH"
-		PATH="$HOMEBREW_PREFIX/opt/node@18/bin:$PATH"
+		prepend_dir_to_path_if_exists "$HOMEBREW_PREFIX/opt/python@3.11/libexec/bin"
+		prepend_dir_to_path_if_exists "$HOMEBREW_PREFIX/opt/node@18/bin"
 		;;
 esac
 
 # Python user site
-user_site="$(python3 -m site --user-base)" && PATH="$user_site/bin:$PATH"
+user_site="$(python3 -m site --user-base)" && prepend_dir_to_path_if_exists "$user_site/bin"
 
 # Set cargo location
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
-PATH="$CARGO_HOME/bin:$PATH"
+prepend_dir_to_path_if_exists "$CARGO_HOME/bin"
 
 # Set rustup location
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
-PATH="$RUSTUP_HOME/bin:$PATH"
+prepend_dir_to_path_if_exists "$RUSTUP_HOME/bin"
 
 # Set Golang local repository
 export GOPATH="$XDG_DATA_HOME/go"
-PATH="$GOPATH/bin:$PATH"
+prepend_dir_to_path_if_exists "$GOPATH/bin"
 
 # Set up composer installation
 export COMPOSER_HOME="$XDG_DATA_HOME/composer"
-PATH="$COMPOSER_HOME/vendor/bin:$PATH"
+prepend_dir_to_path_if_exists "$COMPOSER_HOME/vendor/bin"
 
 # Set the default number of jobs used by `cmake --build` and `ctest`
 # https://stackoverflow.com/a/23569003
@@ -51,7 +53,7 @@ fi
 
 # Set the root of the Android SDK for proper detection in Android Studio
 export ANDROID_SDK_ROOT="$XDG_DATA_HOME/android-sdk"
-PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
+prepend_dir_to_path_if_exists "$ANDROID_SDK_ROOT/platform-tools"
 
 # Alternate location for less's config file and cache and default options
 export LESS=-FR5
@@ -60,7 +62,7 @@ export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
 
 # Alternate location for npm's data
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
-PATH="$XDG_DATA_HOME/node_modules/bin:$PATH"
+prepend_dir_to_path_if_exists "$XDG_DATA_HOME/node_modules/bin"
 
 # Set user-wide paths to binaries
 PATH="$HOME/.local/bin:$PATH"
@@ -69,3 +71,4 @@ PATH="$HOME/.local/bin:$PATH"
 unset platform
 unset cpu_count
 unset user_site
+unset -f prepend_dir_to_path_if_exists
