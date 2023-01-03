@@ -19,8 +19,6 @@ case "$platform" in
 	darwin*)
 		export XDG_CACHE_HOME="$HOME/Library/Caches"
 		eval "$(/opt/homebrew/bin/brew shellenv)"
-		prepend_dir_to_path_if_exists "$HOMEBREW_PREFIX/opt/python@3.11/libexec/bin"
-		prepend_dir_to_path_if_exists "$HOMEBREW_PREFIX/opt/node@18/bin"
 		;;
 esac
 
