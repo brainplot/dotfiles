@@ -6,8 +6,6 @@ platform="$(uname -s | tr '[:upper:]' '[:lower:]')"
 # Make sure PATH is marked as exported
 export PATH
 
-prepend_dir_to_path_if_exists() { [ -d "$1" ] && PATH="$d:$PATH" ; }
-
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
@@ -31,27 +29,27 @@ then
 fi
 
 # Python user site
-user_site="$(python3 -m site --user-base)" && prepend_dir_to_path_if_exists "$user_site/bin"
+user_site="$(python3 -m site --user-base)" && PATH="$user_site/bin:$PATH"
 
 # Set cargo location
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
-prepend_dir_to_path_if_exists "$CARGO_HOME/bin"
+PATH="$CARGO_HOME/bin:$PATH"
 
 # Set rustup location
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
-prepend_dir_to_path_if_exists "$RUSTUP_HOME/bin"
+PATH="$RUSTUP_HOME/bin:$PATH"
 
 # Set Golang local repository
 export GOPATH="$XDG_DATA_HOME/go"
-prepend_dir_to_path_if_exists "$GOPATH/bin"
+PATH="$GOPATH/bin:$PATH"
 
 # Set up composer installation
 export COMPOSER_HOME="$XDG_DATA_HOME/composer"
-prepend_dir_to_path_if_exists "$COMPOSER_HOME/vendor/bin"
+PATH="$COMPOSER_HOME/vendor/bin:$PATH"
 
 # Set the root of the Android SDK for proper detection in Android Studio
 export ANDROID_SDK_ROOT="$XDG_DATA_HOME/android-sdk"
-prepend_dir_to_path_if_exists "$ANDROID_SDK_ROOT/platform-tools"
+PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
 
 # Alternate location for less's config file and cache and default options
 export LESS=-FR5
@@ -60,7 +58,7 @@ export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
 
 # Alternate location for npm's data
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
-prepend_dir_to_path_if_exists "$XDG_DATA_HOME/node_modules/bin"
+PATH="$XDG_DATA_HOME/node_modules/bin:$PATH"
 
 # Set user-wide paths to binaries
 PATH="$HOME/.local/bin:$PATH"
@@ -69,4 +67,3 @@ PATH="$HOME/.local/bin:$PATH"
 unset platform
 unset cpu_count
 unset user_site
-unset -f prepend_dir_to_path_if_exists
