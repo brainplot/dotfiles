@@ -54,6 +54,13 @@ fi
 [ -e ~/.local/share/fzf/completion.bash ] && . ~/.local/share/fzf/completion.bash
 [ -e ~/.local/share/fzf/key-bindings.bash ] && . ~/.local/share/fzf/key-bindings.bash
 
+# HashiCorp tools
+for hashicorp_tool in terraform vault packer
+do
+	hashicorp_tool_full_path="$(command -v "$hashicorp_tool")" &&
+	complete -C "$hashicorp_tool_full_path" "$hashicorp_tool"
+done
+
 # Clean-up
 unset HN_CLR
 unset UR_CLR
@@ -62,3 +69,5 @@ unset AT_CLR
 unset DL_CLR
 unset VC_CLR
 unset RT_CLR
+unset hashicorp_tool
+unset hashicorp_tool_full_path
