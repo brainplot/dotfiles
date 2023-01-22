@@ -29,6 +29,14 @@ fi
 
 PS1="\n${UR_CLR}\u${AT_CLR}@${HN_CLR}\h ${WD_CLR}\w${RT_CLR}"
 
+unset HN_CLR
+unset UR_CLR
+unset WD_CLR
+unset AT_CLR
+unset DL_CLR
+unset VC_CLR
+unset RT_CLR
+
 # Git prompt
 [ -e ~/.git-prompt.sh ] && . ~/.git-prompt.sh
 
@@ -61,13 +69,5 @@ do
 	complete -C "$hashicorp_tool_full_path" "$hashicorp_tool"
 done
 
-# Clean-up
-unset HN_CLR
-unset UR_CLR
-unset WD_CLR
-unset AT_CLR
-unset DL_CLR
-unset VC_CLR
-unset RT_CLR
 unset hashicorp_tool
 unset hashicorp_tool_full_path

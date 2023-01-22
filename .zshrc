@@ -90,6 +90,9 @@ do
 	complete -C "$hashicorp_tool_full_path" "$hashicorp_tool"
 done
 
+unset hashicorp_tool
+unset hashicorp_tool_full_path
+
 # Kuberentes
 command -v kubectl >/dev/null &&
 . <(kubectl completion zsh) &&
@@ -114,7 +117,3 @@ prompt powerlevel10k
 
 # Plugins
 . "$XDG_DATA_HOME"/zsh/plugins/zsh-z/zsh-z.plugin.zsh
-
-# Clean-up
-unset hashicorp_tool
-unset hashicorp_tool_full_path
