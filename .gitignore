@@ -32,9 +32,9 @@ _*
 /.viminfo
 /.vimrc
 
-# Ignore ~/.git-prompt.sh and ~/.git-completion.sh symlinks
+# Ignore ~/.git-prompt.sh and ~/.git-completion.bash symlinks
 /.git-prompt.sh
-/.git-completions.sh
+/.git-completion.bash
 
 # Cloud platforms config data (created by Docker for Windows)
 /.aws

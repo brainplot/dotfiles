@@ -44,6 +44,12 @@ fi
 
 PS1+="\n${DL_CLR}\$${RT_CLR} "
 
+# Git completion
+if [ -r ~/.git-completion.bash ] && . ~/.git-completion.bash
+then
+	__git_complete dot __git_main
+fi
+
 # fzf keybindings
 [ -e ~/.local/share/fzf/completion.bash ] && . ~/.local/share/fzf/completion.bash
 [ -e ~/.local/share/fzf/key-bindings.bash ] && . ~/.local/share/fzf/key-bindings.bash
