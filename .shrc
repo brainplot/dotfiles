@@ -30,6 +30,8 @@ alias gitconfig='git config --global -e'
 alias tmuxconfig='"$EDITOR" "$XDG_CONFIG_HOME"/tmux/tmux.conf'
 alias dot='git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME"'
 
+command -v batcat >/dev/null && alias bat=batcat
+
 # Disable blinking cursor if running in Windows Terminal
 [ -n "$WT_SESSION" ] && printf '\e[2 q'
 
