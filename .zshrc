@@ -84,14 +84,11 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 zstyle ':completion:*' completer _complete _ignored _files
 
 # HashiCorp tools
-cmd_full_path="$(command -v terraform)" &&
-complete -o nospace -C "$cmd_full_path" terraform
-
-cmd_full_path="$(command -v vault)" &&
-complete -o nospace -C "$cmd_full_path" vault
-
-cmd_full_path="$(command -v packer)" &&
-complete -o nospace -C "$cmd_full_path" packer
+for hashicorp_tool in terraform vault packer
+do
+	hashicorp_tool_full_path="$(command -v "$hashicorp_tool")" &&
+	complete -C "$hashicorp_tool_full_path" "$hashicorp_tool"
+done
 
 # Kuberentes
 command -v kubectl >/dev/null &&
@@ -119,4 +116,5 @@ prompt powerlevel10k
 . "$XDG_DATA_HOME"/zsh/plugins/zsh-z/zsh-z.plugin.zsh
 
 # Clean-up
-unset cmd_full_path
+unset hashicorp_tool
+unset hashicorp_tool_full_path
