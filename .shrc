@@ -29,6 +29,7 @@ alias nvimsync="nvim --headless -c 'autocmd User PackerComplete quitall' -c Pack
 alias gitconfig='git config --global -e'
 alias tmuxconfig='"$EDITOR" "$XDG_CONFIG_HOME"/tmux/tmux.conf'
 alias dot='git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME"'
+alias t=tmux
 
 command -v batcat >/dev/null && alias bat=batcat
 
