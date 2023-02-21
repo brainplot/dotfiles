@@ -54,3 +54,27 @@ renumber() {
 		mv -v -- "$1" "$new_number"."$file_wo_number"
 	fi
 }
+
+get_pwd_lowercase() {
+	basename "$PWD" | LC_ALL=C tr '[:upper:]' '[:lower:]'
+}
+
+stop_dscourse_dev_server() {
+	name="$(get_pwd_lowercase)"
+	docker container stop "$name" >/dev/null
+	docker container rm "$name" >/dev/null
+}
+
+start_dscourse_dev_server() {
+	stop_dscourse_dev_server
+
+	container_id="$(docker container run --detach \
+	--restart unless-stopped \
+	--init \
+	-v "$PWD":/mkdocs/docs:ro \
+	-p "$(dig +short localhost A)":"${1:-0}":80 \
+	--name "$name" \
+	dsdev)"
+
+	echo "http://$(docker container port "$container_id" 80)"
+}
