@@ -116,4 +116,6 @@ prompt powerlevel10k
 [ -e ~/.p10k.zsh ] && . ~/.p10k.zsh
 
 # Plugins
-. "$XDG_DATA_HOME"/zsh/plugins/zsh-z/zsh-z.plugin.zsh
+source_plugin() { [ -e "$XDG_DATA_HOME"/zsh/plugins/"$1" ] && . "$XDG_DATA_HOME"/zsh/plugins/"$1" ; }
+source_plugin zsh-z/zsh-z.plugin.zsh
+unfunction source_plugin
