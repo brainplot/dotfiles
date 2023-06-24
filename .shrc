@@ -6,7 +6,6 @@ unset gpg_tty
 case "$TERM" in
 	xterm*|screen*|linux)
 		export EDITOR=nvim
-		export VISUAL="$EDITOR"
 		;;
 esac
 
