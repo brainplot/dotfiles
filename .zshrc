@@ -23,7 +23,7 @@ fi
 # Add user-specific folder to the shell's search path
 fpath+=(
 	"$XDG_DATA_HOME"/zsh/site-functions
-	"$XDG_DATA_HOME"/zsh/plugins/*
+	"$XDG_DATA_HOME"/zsh/plugins/*(N)
 )
 
 # Emacs keys
