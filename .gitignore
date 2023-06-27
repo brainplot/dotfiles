@@ -1,5 +1,7 @@
-# Ignore anything except for dotfiles
+# Ignore anything except for dotfiles, LICENSE and README.md
 /[^.]*
+!/LICENSE
+!/README.md
 
 # Ignore anything but ~/.ssh/config
 /.ssh/*
