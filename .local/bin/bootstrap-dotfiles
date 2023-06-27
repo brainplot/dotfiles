@@ -2,11 +2,8 @@
 
 set -e
 
-echo 'Setting up dotfiles repository...'
-GIT_DIR="${GIT_DIR:-$HOME/.dotfiles.git}" GIT_WORK_TREE="${GIT_WORK_TREE:-$HOME}" sh <<EOF
-git submodule update --init --recursive
-git update-index --assume-unchanged LICENSE && rm -f -- ~/LICENSE
-EOF
+echo 'Setting up submodules...'
+git --git-dir "${DOTFILES_DIR:-$HOME/.dotfiles.git}" --work-tree ~ submodule update --init --recursive
 
 echo 'Fixing ~/.ssh and ~/.gnupg permissions...'
 chmod 700 ~/.ssh ~/.gnupg
