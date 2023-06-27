@@ -26,7 +26,7 @@ Run the `bootstrap-dotfiles` script to finish setting everything up.
 
 > You can avoid typing out the full path to the script if `~/.local/bin` is already in your `$PATH`.
 
-Restart your terminal/shell and you should be ready to go!
+**Restart your terminal/shell and you should be ready to go!**
 
 ### Hiding/Unhiding the `README.md` and `LICENSE` files
 
