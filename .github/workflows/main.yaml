@@ -1,0 +1,28 @@
+name: Dotfiles Tests
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  install:
+    name: Install
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    steps:
+      - name: Set Temporary home
+        run: echo "HOME=$RUNNER_TEMP" >> "$GITHUB_ENV"
+
+      - name: Clone
+        run: git clone -b "$GITHUB_REF_NAME" --bare "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY".git ~/.dotfiles.git
+
+      - name: Populate Work Tree
+        run: git --git-dir ~/.dotfiles.git --work-tree ~ reset --hard
+
+      - name: Run Bootstrap Script
+        run: ~/.local/bin/bootstrap-dotfiles
+
+      - name: Hide LICENSE/README
+        run: |
+          git --git-dir ~/.dotfiles.git --work-tree ~ update-index --assume-unchanged -- ~/README.md ~/LICENSE &&
+          rm -f -- ~/README.md ~/LICENSE
