@@ -2,9 +2,6 @@
 
 set -e
 
-echo 'Setting up submodules...'
-git --git-dir "${DOTFILES_DIR:-$HOME/.dotfiles.git}" --work-tree ~ submodule update --init --recursive
-
 echo 'Fixing ~/.ssh and ~/.gnupg permissions...'
 chmod 700 ~/.ssh ~/.gnupg
 
