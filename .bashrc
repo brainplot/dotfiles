@@ -31,8 +31,7 @@ PS1="\n${UR_CLR}\u${AT_CLR}@${HN_CLR}\h ${WD_CLR}\w${RT_CLR}"
 
 # Git prompt
 [ -e ~/.git-prompt.sh ] && . ~/.git-prompt.sh
-
-if type __git_ps1 >/dev/null 2>&1
+if command -v __git_ps1 >/dev/null
 then
 	GIT_PS1_DESCRIBE_STYLE=branch
 	GIT_PS1_SHOWDIRTYSTATE=1
@@ -53,7 +52,8 @@ unset VC_CLR
 unset RT_CLR
 
 # Git completion
-if [ -r ~/.git-completion.bash ] && . ~/.git-completion.bash
+[ -r ~/.git-completion.bash ] && . ~/.git-completion.bash
+if command -v __git_complete >/dev/null
 then
 	__git_complete dot __git_main
 fi
