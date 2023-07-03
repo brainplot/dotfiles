@@ -29,7 +29,7 @@ _*
 /.motd_shown
 /.sudo_as_admin_successful
 
-# Vim stuff
+# Vim
 /.vim
 /.viminfo
 /.vimrc
@@ -42,7 +42,7 @@ _*
 /.aws
 /.azure
 
-# Docker stuff
+# Docker
 /.docker/
 
 # Misc
