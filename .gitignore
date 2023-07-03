@@ -121,3 +121,6 @@ _*
 
 # WireGuard
 /.vpn/
+
+# MacOS
+/.CFUserTextEncoding
