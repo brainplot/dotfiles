@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+for d in "$XDG_DATA_HOME"/zsh/plugins/* "$XDG_DATA_HOME"/src/*
+do
+	if [ -d "$d" ]
+	then
+		echo "Refreshing $(basename "$d")"
+		git -C "$d" pull -q --ff-only --prune
+	fi
+done
