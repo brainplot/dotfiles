@@ -10,6 +10,14 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
+# Set the default number of jobs used by `cmake --build` and `ctest`
+# https://stackoverflow.com/a/23569003
+if cpu_count="$(getconf _NPROCESSORS_ONLN)"
+then
+	export CMAKE_BUILD_PARALLEL_LEVEL="$(($cpu_count+2))"
+	export CTEST_PARALLEL_LEVEL="$CMAKE_BUILD_PARALLEL_LEVEL"
+fi
+
 case "$platform" in
 	linux*)
 		export XDG_CACHE_HOME="$HOME/.cache"
@@ -19,14 +27,6 @@ case "$platform" in
 		eval "$(/opt/homebrew/bin/brew shellenv)"
 		;;
 esac
-
-# Set the default number of jobs used by `cmake --build` and `ctest`
-# https://stackoverflow.com/a/23569003
-if cpu_count="$(getconf _NPROCESSORS_ONLN)"
-then
-	export CMAKE_BUILD_PARALLEL_LEVEL="$(($cpu_count+2))"
-	export CTEST_PARALLEL_LEVEL="$CMAKE_BUILD_PARALLEL_LEVEL"
-fi
 
 # Python user site
 user_site="$(python3 -m site --user-base)" && PATH="$user_site/bin:$PATH"
