@@ -18,22 +18,29 @@ then
 	export CTEST_PARALLEL_LEVEL="$CMAKE_BUILD_PARALLEL_LEVEL"
 fi
 
+# Set XDG variables
 case "$platform" in
 	linux*)
 		export XDG_CACHE_HOME="$HOME/.cache"
 		;;
 	darwin*)
 		export XDG_CACHE_HOME="$HOME/Library/Caches"
+		;;
+esac
+
+# Set cargo location
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+PATH="$CARGO_HOME/bin:$PATH"
+
+# Source brew environment
+case "$platform" in
+	darwin*)
 		eval "$(/opt/homebrew/bin/brew shellenv)"
 		;;
 esac
 
 # Python user site
 user_site="$(python3 -m site --user-base)" && PATH="$user_site/bin:$PATH"
-
-# Set cargo location
-export CARGO_HOME="$XDG_DATA_HOME/cargo"
-PATH="$CARGO_HOME/bin:$PATH"
 
 # Set rustup location
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
