@@ -86,6 +86,7 @@ _*
 /.local/share/fzf/
 /.local/share/go/
 /.local/share/mkcert/
+/.local/share/node_modules/
 /.local/share/nvim/
 /.local/share/rustup/
 /.local/share/tmux/
