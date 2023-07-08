@@ -1,11 +1,10 @@
-platform="$(uname -s | tr '[:upper:]' '[:lower:]')"
-
 # Set default locale
 [ -z "$LANG" ] && export LANG=en_US.UTF-8
 
 # Make sure PATH is marked as exported
 export PATH
 
+# Set XDG variables
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
@@ -18,7 +17,8 @@ then
 	export CTEST_PARALLEL_LEVEL="$CMAKE_BUILD_PARALLEL_LEVEL"
 fi
 
-# Set XDG variables
+platform="$(uname -s | tr '[:upper:]' '[:lower:]')"
+
 case "$platform" in
 	linux*)
 		export XDG_CACHE_HOME="$HOME/.cache"
