@@ -125,3 +125,6 @@ _*
 
 # MacOS
 /.CFUserTextEncoding
+
+# Terminfo database
+/.terminfo/
