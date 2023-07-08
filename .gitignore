@@ -125,6 +125,7 @@ _*
 
 # MacOS
 /.CFUserTextEncoding
+/.Trash/
 
 # Terminfo database
 /.terminfo/
