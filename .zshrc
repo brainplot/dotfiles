@@ -6,10 +6,6 @@
 [ -e "$XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh" ] &&
 . "$XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh"
 
-# Make PATH and FPATH unique sets
-typeset -U PATH path
-typeset -U FPATH fpath
-
 # Add Homebrew stuff to the shell's search path, if it's installed
 if [ -n "$HOMEBREW_PREFIX" ]
 then
