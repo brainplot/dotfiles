@@ -42,7 +42,8 @@ alias tt='tmux new -s "$(basename "$PWD")"'
 alias tmuxconfig='"$EDITOR" "$XDG_CONFIG_HOME"/tmux/tmux.conf'
 
 # Python aliases
-alias activate-venv='. "$(git rev-parse --show-toplevel)/.venv/bin/activate"'
+alias activate-venv='. ./.venv/bin/activate'
+alias create-venv='python3 -m venv ./.venv'
 
 # Disable blinking cursor if running in Windows Terminal
 [ -n "$WT_SESSION" ] && printf '\e[2 q'
