@@ -25,7 +25,7 @@ command -v batcat >/dev/null && alias bat=batcat
 
 # Neovim aliases
 alias nvimconfig="nvim -c 'edit \$MYVIMRC'"
-alias nvimsync="nvim --headless -c 'autocmd User PackerComplete quitall' -c PackerSync"
+alias nvimsync='nvim --headless "+Lazy! sync" +qa'
 
 # Shell aliases
 alias shconfig='"$EDITOR" "$HOME"/.shrc'
