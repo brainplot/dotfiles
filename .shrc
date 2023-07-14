@@ -15,23 +15,34 @@ case "$TERM" in
 		;;
 esac
 
+# Misc aliases
 alias la='ls -lhA'
 alias ll='ls -lh'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias tree="tree -I '.git|.hg|.svn'"
+command -v batcat >/dev/null && alias bat=batcat
+
+# Neovim aliases
+alias nvimconfig="nvim -c 'edit \$MYVIMRC'"
+alias nvimsync="nvim --headless -c 'autocmd User PackerComplete quitall' -c PackerSync"
+
+# Shell aliases
 alias shconfig='"$EDITOR" "$HOME"/.shrc'
 alias bashconfig='"$EDITOR" "$HOME"/.bashrc'
 alias zshconfig='"$EDITOR" "$HOME"/.zshrc'
-alias nvimconfig="nvim -c 'edit \$MYVIMRC'"
-alias nvimsync="nvim --headless -c 'autocmd User PackerComplete quitall' -c PackerSync"
-alias gitconfig='git config --global -e'
-alias tmuxconfig='"$EDITOR" "$XDG_CONFIG_HOME"/tmux/tmux.conf'
+
+# Git aliases
 alias dot='git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME"'
+alias gitconfig='git config --global -e'
+
+# Tmux aliases
 alias t=tmux
 alias tt='tmux new -s "$(basename "$PWD")"'
+alias tmuxconfig='"$EDITOR" "$XDG_CONFIG_HOME"/tmux/tmux.conf'
 
-command -v batcat >/dev/null && alias bat=batcat
+# Python aliases
+alias activate-venv='. "$(git rev-parse --show-toplevel)/.venv/bin/activate"'
 
 # Disable blinking cursor if running in Windows Terminal
 [ -n "$WT_SESSION" ] && printf '\e[2 q'
