@@ -2,6 +2,9 @@
 
 GPG_TTY="$(tty)" && export GPG_TTY || unset GPG_TTY
 
+# Disable blinking cursor if running in Windows Terminal
+[ -n "$WT_SESSION" ] && printf '\e[2 q'
+
 case "$TERM" in
 	xterm*|screen*|linux)
 		export EDITOR=nvim
@@ -43,9 +46,6 @@ alias tmuxconfig='"$EDITOR" "$XDG_CONFIG_HOME"/tmux/tmux.conf'
 # Python aliases
 alias activate-venv='. ./.venv/bin/activate'
 alias create-venv='python3 -m venv ./.venv'
-
-# Disable blinking cursor if running in Windows Terminal
-[ -n "$WT_SESSION" ] && printf '\e[2 q'
 
 # Functions
 source_aws_credentials_from_csv() {
