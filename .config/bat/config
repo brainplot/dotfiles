@@ -4,7 +4,7 @@
 --plain
 
 # Set the theme
---theme=TwoDark
+--theme=1337
 
 # Use C++ syntax (instead of C) for .h header files
 --map-syntax h:C++
