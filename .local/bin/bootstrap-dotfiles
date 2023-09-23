@@ -14,18 +14,3 @@ do
 	dest_dir="$zsh_plugins_dir"/"${p##*/}"
 	[ ! -d "$dest_dir" ] && git clone -q --depth=1 https://github.com/"$p".git "$dest_dir"
 done
-
-echo 'Cloning misc repositories...'
-repos='projekt0n/github-theme-contrib'
-repos_dir=~/.local/share/src
-
-for r in $repos
-do
-	dest_dir="$repos_dir"/"${r##*/}"
-	[ ! -d "$dest_dir" ] && git clone -q --depth=1 https://github.com/"$r".git "$dest_dir"
-done
-
-echo 'Setting up tmux theme...'
-tmux_data_dir=~/.local/share/tmux
-mkdir -p "$tmux_data_dir"
-ln -fs "$repos_dir"/github-theme-contrib/tmux/github_dark_default.conf "$tmux_data_dir"/theme.tmux
