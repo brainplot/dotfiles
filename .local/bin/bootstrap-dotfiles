@@ -7,7 +7,7 @@ chmod 700 ~/.ssh ~/.gnupg
 
 echo 'Installing zsh plugins...'
 zsh_plugins='romkatv/powerlevel10k agkozak/zsh-z'
-zsh_plugins_dir=~/.local/share/zsh/plugins
+zsh_plugins_dir="$XDG_DATA_HOME/zsh/plugins"
 
 for p in $zsh_plugins
 do
