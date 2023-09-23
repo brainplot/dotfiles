@@ -129,3 +129,6 @@ _*
 
 # Terminfo database
 /.terminfo/
+
+# VNC Client
+/.vnc/
