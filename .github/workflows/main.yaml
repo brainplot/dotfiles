@@ -20,7 +20,7 @@ jobs:
         run: git --git-dir ~/.dotfiles.git --work-tree ~ reset --hard
 
       - name: Run Bootstrap Script
-        run: ~/.local/bin/bootstrap-dotfiles
+        run: . ~/.profile && ~/.local/bin/bootstrap-dotfiles
 
       - name: Hide LICENSE/README
         run: |
