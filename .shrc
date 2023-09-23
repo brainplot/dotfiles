@@ -50,6 +50,10 @@ alias tmuxconfig='"$EDITOR" "$XDG_CONFIG_HOME"/tmux/tmux.conf'
 alias activate-venv='. ./.venv/bin/activate'
 alias create-venv='python3 -m venv ./.venv'
 
+# Docker aliases
+alias dcu='docker compose up'
+alias dcd='docker compose down'
+
 # Functions
 source_aws_credentials_from_csv() {
 	if [ "$#" -lt 1 ]
