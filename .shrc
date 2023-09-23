@@ -54,6 +54,15 @@ alias create-venv='python3 -m venv ./.venv'
 alias dcu='docker compose up'
 alias dcd='docker compose down'
 
+# Docker dev containers
+dnode() {
+	docker run -it --rm --init \
+	-e NPM_CONFIG_UPDATE_NOTIFIER=false \
+	"$@" \
+	node:18 \
+	bash
+}
+
 # Functions
 source_aws_credentials_from_csv() {
 	if [ "$#" -lt 1 ]
