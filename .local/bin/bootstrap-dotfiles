@@ -14,3 +14,7 @@ do
 	dest_dir="$zsh_plugins_dir"/"${p##*/}"
 	[ ! -d "$dest_dir" ] && git clone -q --depth=1 https://github.com/"$p".git "$dest_dir"
 done
+
+echo 'Setting up tmux theme...'
+curl --create-dirs -sS -o "$XDG_DATA_HOME/tmux/theme.tmux" -L \
+https://raw.githubusercontent.com/projekt0n/github-theme-contrib/acd6a0b47227c935898a8a5417b25ce90b651222/tmux/github_dark_default.conf
