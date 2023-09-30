@@ -64,6 +64,10 @@ dnode() {
 }
 
 # Functions
+lab() {
+	ssh -i ~/.ssh/desotech -p 22010 student@"$1"
+}
+
 source_aws_credentials_from_csv() {
 	if [ "$#" -lt 1 ]
 	then
