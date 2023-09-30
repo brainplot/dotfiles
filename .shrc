@@ -101,7 +101,7 @@ start_dscourse_dev_server() {
 	-v "$PWD":/mkdocs/docs:ro \
 	-p "$(dig +short localhost A)":"${1:-0}":80 \
 	--name "$name" \
-	dsdev)"
+	r.deso.tech/desotech/dsdev)"
 
 	echo "http://$(docker container port "$container_id" 80)"
 }
