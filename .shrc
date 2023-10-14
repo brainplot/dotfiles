@@ -109,3 +109,9 @@ start_dscourse_dev_server() {
 
 	echo "http://$(docker container port "$container_id" 80)"
 }
+
+kns() {
+	kubectl create ns --dry-run=client -o yaml "$1" |
+	kubectl apply -f - &&
+	kubectl config set-context --current --namespace "$1"
+}
