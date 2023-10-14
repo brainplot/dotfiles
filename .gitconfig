@@ -29,7 +29,7 @@
 	package = !git bundle create ../\"$(basename \"$(git rev-parse --show-toplevel)\")\".bundle --all
 	license = "!license() { curl -sS -H 'Accept: application/vnd.github.v3+json' https://api.github.com/licenses/\"$1\" | jq -r .body ; }; license"
 	latest = !git tag --sort=-creatordate | head -n1 | xargs -r git -c advice.detachedHead=false checkout
-	ignore-file = "!ignore_file() { echo \"$1\" >>.git/info/exclude ; }; ignore_file"
+	ignore-file = "!ignore_file() { for f ; do echo \"$f\" >>.git/info/exclude ; done ; }; ignore_file"
 	merge-main = !branch=\"$(git branch --show-current)\" && git switch main && git merge \"$branch\" && git switch -
 	merge-main-pp = !branch=\"$(git branch --show-current)\" && git switch main && git merge \"$branch\" && git push && git switch -
 	logg = log --graph --all --oneline
