@@ -1,0 +1,6 @@
+# vim: set filetype=gitconfig:
+
+[user]
+	email = g.recchia@desotech.it
+[commit]
+	gpgsign = false
