@@ -4,3 +4,6 @@
 	email = g.recchia@desotech.it
 [commit]
 	gpgsign = false
+[alias]
+	wclone = "!org=desotech-it ; repo=\"$1\" && shift && repo_lc=\"$(printf \"$repo\" | awk '{ print tolower($0) }')\" && \
+		git clone \"$@\" git@github.com:\"$org\"/\"$repo\".git \"$repo_lc\""
