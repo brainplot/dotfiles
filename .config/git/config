@@ -9,26 +9,26 @@
 	autocrlf = input
 	pager = less -x1,5
 [alias]
-	ignore = !curl -sLw '\n' https://www.toptal.com/developers/gitignore/api/\"$(echo $@ | tr -s '[:blank:]' ,)\"
-	lol = log --graph --pretty=birdseye
-	pristine = !git reset --hard && git clean -fdx
-	squeeze = !git reflog expire --all --expire=now && git gc --prune=now --aggressive
-	psu = !git push -u "${1:-origin}" "$(git rev-parse --abbrev-ref HEAD)"
 	add-file = "!add_file() { git commit -m \"Add \\`$1\\`\" ; } ; add_file"
-	update-file = "!update_file() { git commit -m \"Update \\`$1\\`\" ; } ; update_file"
-	root = rev-parse --show-toplevel
-	ic = commit -m 'Initial commit'
-	can = commit --amend --no-edit
 	caan = commit -a --amend --no-edit
-	pp = push
-	pl = pull
-	package = !git bundle create ../\"$(basename \"$(git rev-parse --show-toplevel)\")\".bundle --all
-	license = "!license() { curl -sS -H 'Accept: application/vnd.github.v3+json' https://api.github.com/licenses/\"$1\" | jq -r .body ; }; license"
-	latest = !git tag --sort=-creatordate | head -n1 | xargs -r git -c advice.detachedHead=false checkout
+	can = commit --amend --no-edit
+	ic = commit -m 'Initial commit'
+	ignore = !curl -sLw '\n' https://www.toptal.com/developers/gitignore/api/\"$(echo $@ | tr -s '[:blank:]' ,)\"
 	ignore-file = "!ignore_file() { for f ; do echo \"$f\" >>.git/info/exclude ; done ; }; ignore_file"
+	latest = !git tag --sort=-creatordate | head -n1 | xargs -r git -c advice.detachedHead=false checkout
+	license = "!license() { curl -sS -H 'Accept: application/vnd.github.v3+json' https://api.github.com/licenses/\"$1\" | jq -r .body ; }; license"
+	logg = log --graph --all --oneline
+	lol = log --graph --pretty=birdseye
 	merge-main = !branch=\"$(git branch --show-current)\" && git switch main && git merge \"$branch\" && git switch -
 	merge-main-pp = !branch=\"$(git branch --show-current)\" && git switch main && git merge \"$branch\" && git push && git switch -
-	logg = log --graph --all --oneline
+	package = !git bundle create ../\"$(basename \"$(git rev-parse --show-toplevel)\")\".bundle --all
+	pl = pull
+	pp = push
+	pristine = !git reset --hard && git clean -fdx
+	psu = !git push -u "${1:-origin}" "$(git rev-parse --abbrev-ref HEAD)"
+	root = rev-parse --show-toplevel
+	squeeze = !git reflog expire --all --expire=now && git gc --prune=now --aggressive
+	update-file = "!update_file() { git commit -m \"Update \\`$1\\`\" ; } ; update_file"
 [pull]
 	rebase = true
 [pretty]
