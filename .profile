@@ -59,7 +59,7 @@ export ANDROID_SDK_ROOT="$XDG_DATA_HOME/android-sdk"
 PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
 
 # Alternate location for less's config file and cache and default options
-export LESS=-FR5
+export LESS='-FR5 --mouse'
 export LESSKEY="$XDG_CONFIG_HOME/less/lesskey"
 export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
 
