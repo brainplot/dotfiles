@@ -84,6 +84,7 @@ _*
 /.gem/
 /.local/share/cargo/*
 /.local/share/fzf/
+/.local/share/gem/
 /.local/share/go/
 /.local/share/mkcert/
 /.local/share/node_modules/
