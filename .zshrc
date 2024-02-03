@@ -80,7 +80,7 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 zstyle ':completion:*' completer _complete _ignored _files
 
 # HashiCorp tools
-for hashicorp_tool in terraform vault packer
+for hashicorp_tool in terraform vault packer tofu
 do
 	hashicorp_tool_full_path="$(command -v "$hashicorp_tool")" &&
 	complete -C "$hashicorp_tool_full_path" "$hashicorp_tool"
