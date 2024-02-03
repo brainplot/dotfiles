@@ -13,6 +13,7 @@
 	caan = commit -a --amend --no-edit
 	can = commit --amend --no-edit
 	ic = commit -m 'Initial commit'
+	icc = commit -m 'chore: initial commit'
 	ignore = !curl -sLw '\n' https://www.toptal.com/developers/gitignore/api/\"$(echo $@ | tr -s '[:blank:]' ,)\"
 	ignore-file = "!ignore_file() { for f ; do echo \"$f\" >>.git/info/exclude ; done ; }; ignore_file"
 	latest = !git tag --sort=-creatordate | head -n1 | xargs -r git -c advice.detachedHead=false checkout
