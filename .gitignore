@@ -21,6 +21,9 @@ _*
 # Ignore misc src folder
 /.local/share/src/
 
+# Ignore local CA folder
+/.local/share/ssl/
+
 # History files
 .*_history
 
