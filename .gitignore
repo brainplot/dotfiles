@@ -114,6 +114,10 @@ _*
 # VSCode folder
 /.vscode/
 
+# Virus Total CLI
+/.vt.relationships.cache
+/.vt.toml
+
 # Gradle
 /.local/share/gradle/
 /.gradle/
