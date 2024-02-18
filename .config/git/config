@@ -48,3 +48,5 @@
 	sort = -committerdate
 [merge]
 	conflictstyle = zdiff3
+[diff]
+	algorithm = histogram
