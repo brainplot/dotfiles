@@ -50,3 +50,5 @@
 	conflictstyle = zdiff3
 [diff]
 	algorithm = histogram
+[url "git@github.com:"]
+	pushInsteadOf = https://github.com/
