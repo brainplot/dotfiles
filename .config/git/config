@@ -46,3 +46,5 @@
 	ui = auto
 [branch]
 	sort = -committerdate
+[merge]
+	conflictstyle = zdiff3
