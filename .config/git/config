@@ -1,7 +1,7 @@
 [user]
 	name = Gianluca Recchia
 	email = gianluca.recchia@protonmail.com
-	signingkey = CBB5274864FBF0DCCCB9230C14354796B08C3832
+	signingkey = BB49BF8818271BFF1B900D42940BFCEFD4A47508
 [commit]
 	gpgsign = true
 	verbose = true
