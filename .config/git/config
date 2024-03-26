@@ -42,8 +42,6 @@
 	path = config.work
 [rerere]
 	enabled = true
-[column]
-	ui = auto
 [branch]
 	sort = -committerdate
 [merge]
