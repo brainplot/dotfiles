@@ -32,7 +32,7 @@ esac
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 PATH="$CARGO_HOME/bin:$PATH"
 
-# Source brew environment
+# Set up brew environment
 case "$platform" in
 	darwin*)
 		eval "$(/opt/homebrew/bin/brew shellenv)"
