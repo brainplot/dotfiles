@@ -92,6 +92,7 @@ _*
 /.local/share/mkcert/
 /.local/share/node_modules/
 /.local/share/nvim/
+/.local/share/pyenv/
 /.local/share/rustup/
 /.local/share/tmux/
 /.terraform.d/
