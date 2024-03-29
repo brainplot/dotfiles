@@ -46,9 +46,9 @@ alias dot='git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME"'
 alias gitconfig='git config --global -e'
 
 # Tmux aliases
-alias t='exec tmux'
-alias tt='exec tmux new -s "$(basename "$PWD")"'
-alias ttd='exec tmux new -d -s'
+alias t=tmux
+alias tt='tmux new -s "$(basename "$PWD")"'
+alias ttd='tmux new -d -s'
 alias tmuxconfig='"$EDITOR" "$XDG_CONFIG_HOME"/tmux/tmux.conf'
 
 # Python aliases
