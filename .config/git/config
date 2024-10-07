@@ -53,3 +53,5 @@
 	algorithm = histogram
 [url "git@github.com:"]
 	pushInsteadOf = https://github.com/
+[push]
+	autoSetupRemote = true
