@@ -97,8 +97,14 @@ get_pwd_lowercase() {
 
 stop_dscourse_dev_server() {
 	name="$(get_pwd_lowercase)"
-	docker container stop "$name" >/dev/null
-	docker container rm "$name" >/dev/null
+	for container in $(docker container ls --format '{{.Names}}')
+	do
+		if [ "$name" = "$container" ]
+		then
+			docker container stop "$name" >/dev/null
+			docker container rm "$name" >/dev/null
+		fi
+	done
 }
 
 start_dscourse_dev_server() {
