@@ -30,6 +30,9 @@
 	root = rev-parse --show-toplevel
 	squeeze = !git reflog expire --all --expire=now && git gc --prune=now --aggressive
 	update-file = "!update_file() { git commit -m \"Update \\`$1\\`\" ; } ; update_file"
+	sm = switch main
+	md = merge dev
+	sd = switch dev
 [pull]
 	rebase = true
 [pretty]
