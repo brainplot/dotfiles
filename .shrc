@@ -47,7 +47,7 @@ alias gitconfig='git config --global -e'
 
 # Tmux aliases
 alias t=tmux
-alias tt='tmux new -s "$(basename "$PWD")"'
+alias tt='tmux new -As "$(basename "$PWD")"'
 alias ttd='tmux new -d -s'
 alias tmuxconfig='"$EDITOR" "$XDG_CONFIG_HOME"/tmux/tmux.conf'
 
