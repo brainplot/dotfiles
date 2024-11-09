@@ -85,6 +85,7 @@ _*
 /.config/wireshark/
 /.config/zed/
 /.gem/
+/.local/pipx/
 /.local/share/cargo/*
 /.local/share/fzf/
 /.local/share/gem/
