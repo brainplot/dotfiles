@@ -33,6 +33,12 @@
 	sm = switch main
 	md = merge dev
 	sd = switch dev
+	a = add
+	c = commit
+	d = diff
+	m = merge
+	r = restore
+	s = status
 [pull]
 	rebase = true
 [pretty]
