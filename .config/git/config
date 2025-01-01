@@ -24,7 +24,7 @@
 	merge-main-pp = !branch=\"$(git branch --show-current)\" && git switch main && git merge \"$branch\" && git push && git switch -
 	package = !git bundle create ../\"$(basename \"$(git rev-parse --show-toplevel)\")\".bundle --all
 	pl = pull
-	pp = push
+	ps = push
 	pristine = !git reset --hard && git clean -fdx
 	psu = !git push -u "${1:-origin}" "$(git rev-parse --abbrev-ref HEAD)"
 	root = rev-parse --show-toplevel
