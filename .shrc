@@ -55,13 +55,13 @@ alias tmuxconfig='"$EDITOR" "$XDG_CONFIG_HOME"/tmux/tmux.conf'
 alias activate-venv='. ./.venv/bin/activate'
 alias create-venv='python3 -m venv ./.venv'
 
-# Docker aliases
-alias dcu='docker compose up'
-alias dcd='docker compose down'
+# Podman aliases
+alias pcu='podman compose up'
+alias pcd='podman compose down'
 
-# Docker dev containers
+# Podman dev containers
 dnode() {
-	docker run -it --rm --init \
+	podman run -it --rm --init \
 	-e NPM_CONFIG_UPDATE_NOTIFIER=false \
 	"$@" \
 	node:18 \
@@ -97,12 +97,12 @@ get_pwd_lowercase() {
 
 stop_dscourse_dev_server() {
 	name="$(get_pwd_lowercase)"
-	for container in $(docker container ls --format '{{.Names}}')
+	for container in $(podman container ls --format '{{.Names}}')
 	do
 		if [ "$name" = "$container" ]
 		then
-			docker container stop "$name" >/dev/null
-			docker container rm "$name" >/dev/null
+			podman container stop "$name" >/dev/null
+			podman container rm "$name" >/dev/null
 		fi
 	done
 }
@@ -110,15 +110,15 @@ stop_dscourse_dev_server() {
 start_dscourse_dev_server() {
 	stop_dscourse_dev_server
 
-	container_id="$(docker container run --detach \
+	container_id="$(podman container run -q --detach \
 	--restart unless-stopped \
 	--init \
 	-v "$PWD":/mkdocs/docs:ro \
-	-p "$(dig +short localhost A)":"${1:-0}":80 \
+	-p 127.0.0.1:"${1:-0}":80 \
 	--name "$name" \
-	r.deso.tech/desotech/dsdev)"
+	r.deso.tech/desotech/dsdev)" &&
 
-	echo "http://$(docker container port "$container_id" 80)"
+	echo "http://$(podman container port "$container_id" 80)"
 }
 
 kns() {
