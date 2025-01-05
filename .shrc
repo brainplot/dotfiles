@@ -16,7 +16,7 @@ case "$TERM" in
 esac
 
 case "$TERM" in
-	xterm-*color|screen-*color|tmux-*color)
+	xterm-*color|screen-*color|tmux-*color|xterm-ghostty)
 		export CLICOLOR=1
 		;;
 esac
