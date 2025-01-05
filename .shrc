@@ -11,7 +11,7 @@ stty -ixon
 
 case "$TERM" in
 	xterm*|screen*|linux)
-		export EDITOR=nvim
+		export EDITOR="$(command -v nvim 2>&1 >/dev/null && echo nvim || echo vim)"
 		;;
 esac
 
