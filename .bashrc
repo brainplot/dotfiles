@@ -69,5 +69,8 @@ do
 	complete -C "$hashicorp_tool_full_path" "$hashicorp_tool"
 done
 
+# Pyenv
+command -v pyenv >/dev/null && eval "$(pyenv init - bash)"
+
 unset hashicorp_tool
 unset hashicorp_tool_full_path

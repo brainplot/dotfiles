@@ -44,7 +44,6 @@ esac
 # pyenv
 export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
 PATH="$PYENV_ROOT/bin:$PATH"
-command -v pyenv >/dev/null && eval "$(pyenv init -)"
 # user_site="$(python3 -m site --user-base)" && PATH="$user_site/bin:$PATH"
 
 # Set rustup location

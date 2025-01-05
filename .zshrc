@@ -108,3 +108,6 @@ prompt pure
 source_plugin() { [ -e "$XDG_DATA_HOME"/zsh/plugins/"$1" ] && . "$XDG_DATA_HOME"/zsh/plugins/"$1" ; }
 source_plugin zsh-z/zsh-z.plugin.zsh
 unfunction source_plugin
+
+# Pyenv
+command -v pyenv >/dev/null && eval "$(pyenv init - zsh)"
