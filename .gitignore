@@ -87,6 +87,7 @@ _*
 /.gem/
 /.local/pipx/
 /.local/share/cargo/*
+/.local/share/containers/
 /.local/share/fzf/
 /.local/share/gem/
 /.local/share/go/
