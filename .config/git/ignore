@@ -91,3 +91,6 @@ $RECYCLE.BIN/
 
 # Workspace files
 *.code-workspace
+
+### Zed ###
+.zed/
