@@ -9,17 +9,23 @@ stty -ixon
 # Disable blinking cursor if running in Windows Terminal
 [ -n "$WT_SESSION" ] && printf '\e[2 q'
 
-case "$TERM" in
-	xterm*|screen*|linux)
-		export EDITOR="$(command -v nvim 2>&1 >/dev/null && echo nvim || echo vim)"
-		;;
-esac
+if [ -z "$EDITOR" ]
+then
+	case "$TERM" in
+		xterm*|screen*|linux)
+			export EDITOR="$(command -v nvim 2>&1 >/dev/null && echo nvim || echo vim)"
+			;;
+	esac
+fi
 
-case "$TERM" in
-	xterm-*color|screen-*color|tmux-*color|xterm-ghostty)
-		export CLICOLOR=1
-		;;
-esac
+if [ -z "$CLICOLOR" ]
+then
+	case "$TERM" in
+		xterm-*color|screen-*color|tmux-*color|xterm-ghostty)
+			export CLICOLOR=1
+			;;
+	esac
+fi
 
 # Environment variables
 export LESS='-FR5 --mouse'
