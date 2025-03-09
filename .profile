@@ -27,7 +27,7 @@ esac
 
 # Set cargo location
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
-PATH="$CARGO_HOME/bin:$PATH"
+[ -e "$CARGO_HOME/env" ] && . "$CARGO_HOME/env"
 
 # Set up brew environment
 case "$platform" in
