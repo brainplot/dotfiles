@@ -64,6 +64,7 @@ alias create-venv='python3 -m venv ./.venv'
 # Podman aliases
 alias pcu='podman compose up'
 alias pcd='podman compose down'
+alias docker=podman
 
 # Podman dev containers
 dnode() {
