@@ -32,7 +32,7 @@ PATH="$CARGO_HOME/bin:$PATH"
 # Set up brew environment
 case "$platform" in
 	darwin*)
-		node_version=20
+		node_version=22
 		eval "$(/opt/homebrew/bin/brew shellenv)"
 		export PATH="/opt/homebrew/opt/node@$node_version/bin:$PATH"
 		export LDFLAGS="-L/opt/homebrew/opt/node@$node_version/lib"
