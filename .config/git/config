@@ -39,6 +39,7 @@
 	m = merge
 	r = restore
 	s = status
+	dc = diff --cached
 [pull]
 	rebase = true
 [pretty]
