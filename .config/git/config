@@ -62,3 +62,5 @@
 	pushInsteadOf = https://github.com/
 [push]
 	autoSetupRemote = true
+[help]
+	autocorrect = prompt
