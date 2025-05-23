@@ -135,3 +135,6 @@ kns() {
 }
 
 load_dotenv() { export $(sed -e '/^[[:space:]]*#/d;/^$/d' "${1:-.env}" | paste -d ' ' -s -) ; }
+
+show_crt() { openssl x509 -text -noout -in "$1" | less ; }
+show_csr() { openssl req -text -noout -in "$1" | less ; }
