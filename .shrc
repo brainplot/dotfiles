@@ -133,3 +133,5 @@ kns() {
 	kubectl apply -f - &&
 	kubectl config set-context --current --namespace "$1"
 }
+
+load_dotenv() { export $(sed -e '/^[[:space:]]*#/d;/^$/d' "${1:-.env}" | paste -d ' ' -s -) ; }
