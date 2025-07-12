@@ -87,6 +87,7 @@ _*
 /.config/zed/
 /.gem/
 /.local/pipx/
+/.local/sessionmanagerplugin/
 /.local/share/cargo/*
 /.local/share/containers/
 /.local/share/fzf/
