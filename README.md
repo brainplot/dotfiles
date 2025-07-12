@@ -41,5 +41,6 @@ rm -f -- ~/README.md ~/LICENSE
 You unhide them with the following command.
 
 ```sh
-dot restore -- ~/README.md ~/LICENSE
+dot restore -- ~/README.md ~/LICENSE &&
+dot update-index --no-assume-unchanged -- ~/README.md ~/LICENSE
 ```
