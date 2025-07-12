@@ -66,6 +66,9 @@ alias pcu='podman compose up'
 alias pcd='podman compose down'
 alias docker=podman
 
+# Gradle aliaes
+alias kill-all-gradle-daemons="pkill -f '.*GradleDaemon.*'"
+
 # Podman dev containers
 dnode() {
 	podman run -it --rm --init \
