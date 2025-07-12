@@ -15,7 +15,7 @@ git clone --bare https://github.com/brainplot/dotfiles.git ~/.dotfiles.git
 Since we did a bare clone, let's populate the `$HOME` directory with the repository contents!
 
 ```sh
-git --git-dir ~/.dotfiles.git --work-tree ~ reset --hard
+git --git-dir ~/.dotfiles.git --work-tree "$HOME" reset --hard
 ```
 
 Run the `bootstrap-dotfiles` script to finish setting everything up.
@@ -34,7 +34,8 @@ After the installation is finalized, if you wish, you can hide the `README.md` f
 filesystem with the following command.
 
 ```sh
-dot update-index --assume-unchanged -- ~/README.md ~/LICENSE && rm -f -- ~/README.md ~/LICENSE
+dot update-index --assume-unchanged -- ~/README.md ~/LICENSE &&
+rm -f -- ~/README.md ~/LICENSE
 ```
 
 You unhide them with the following command.
