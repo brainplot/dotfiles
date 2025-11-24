@@ -28,7 +28,7 @@ then
 fi
 
 # Environment variables
-export LESS='-FR5 --mouse'
+export LESS='-SR5 --mouse'
 
 # Misc aliases
 alias la='ls -lhA'
