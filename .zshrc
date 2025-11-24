@@ -105,6 +105,9 @@ autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey "^X^E" edit-command-line
 
+# Pyenv
+command -v pyenv >/dev/null && eval "$(pyenv init - zsh)"
+
 # Prompt
 autoload -Uz promptinit && promptinit
 
@@ -113,6 +116,3 @@ autoload -Uz promptinit && promptinit
 . "$HOMEBREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme" &&
 [ -f ~/.p10k.zsh ] &&
 source ~/.p10k.zsh
-
-# Pyenv
-command -v pyenv >/dev/null && eval "$(pyenv init - zsh)"
