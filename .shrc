@@ -83,10 +83,6 @@ dnode() {
 }
 
 # Functions
-lab() {
-	ssh -i ~/.ssh/desotech -p 22010 student@"$1"
-}
-
 source_aws_credentials_from_csv() {
 	if [ "$#" -lt 1 ]
 	then
@@ -94,45 +90,6 @@ source_aws_credentials_from_csv() {
 	else
 		eval "$(awk -F, 'FNR==2 { printf "export AWS_ACCESS_KEY_ID=%s AWS_SECRET_ACCESS_KEY=%s", $3, $4 }' "$1")"
 	fi
-}
-
-renumber() {
-	new_number="$(printf '%02d' "$2")"
-	file_wo_number="${1#*.}"
-	if [ "$1" != "$file_wo_number" ]
-	then
-		mv -v -- "$1" "$new_number"."$file_wo_number"
-	fi
-}
-
-get_pwd_lowercase() {
-	basename "$PWD" | LC_ALL=C tr '[:upper:]' '[:lower:]'
-}
-
-stop_dscourse_dev_server() {
-	name="$(get_pwd_lowercase)"
-	for container in $(podman container ls --format '{{.Names}}')
-	do
-		if [ "$name" = "$container" ]
-		then
-			podman container stop "$name" >/dev/null
-			podman container rm "$name" >/dev/null
-		fi
-	done
-}
-
-start_dscourse_dev_server() {
-	stop_dscourse_dev_server
-
-	container_id="$(podman container run -q --detach \
-	--restart unless-stopped \
-	--init \
-	-v "$PWD":/mkdocs/docs:ro \
-	-p 127.0.0.1:"${1:-0}":80 \
-	--name "$name" \
-	r.deso.tech/desotech/dsdev)" &&
-
-	echo "http://$(podman container port "$container_id" 80)"
 }
 
 kns() {
