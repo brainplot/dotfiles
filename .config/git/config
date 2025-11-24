@@ -7,7 +7,6 @@
 	verbose = true
 [core]
 	autocrlf = input
-	pager = less -x1,5
 [alias]
 	add-file = "!add_file() { git commit -m \"Add \\`$1\\`\" ; } ; add_file"
 	caan = commit -a --amend --no-edit
