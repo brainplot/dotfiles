@@ -13,7 +13,6 @@ fi
 # Add user-specific folder to the shell's search path
 fpath+=(
 	"$XDG_DATA_HOME"/zsh/site-functions
-	"$XDG_DATA_HOME"/zsh/plugins/*(N)
 )
 
 # Add fpath for Docker completions, if they exist
@@ -114,11 +113,6 @@ autoload -Uz promptinit && promptinit
 . "$HOMEBREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme" &&
 [ -f ~/.p10k.zsh ] &&
 source ~/.p10k.zsh
-
-# Plugins
-source_plugin() { [ -e "$XDG_DATA_HOME"/zsh/plugins/"$1" ] && . "$XDG_DATA_HOME"/zsh/plugins/"$1" ; }
-source_plugin zsh-z/zsh-z.plugin.zsh
-unfunction source_plugin
 
 # Pyenv
 command -v pyenv >/dev/null && eval "$(pyenv init - zsh)"
