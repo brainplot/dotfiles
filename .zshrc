@@ -84,10 +84,11 @@ unset hashicorp_tool
 unset hashicorp_tool_full_path
 
 # Kuberentes
-command -v kubectl >/dev/null &&
-. <(kubectl completion zsh) &&
-alias k=kubectl &&
-compdef __start_kubectl k
+if command -v kubectl >/dev/null
+then
+	. <(kubectl completion zsh) &&
+	compdef __start_kubectl k
+fi
 
 # Make alt-backspace behave like Bash
 autoload -Uz select-word-style

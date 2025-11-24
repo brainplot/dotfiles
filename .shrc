@@ -61,6 +61,10 @@ alias tmuxconfig='"$EDITOR" "$XDG_CONFIG_HOME"/tmux/tmux.conf'
 alias activate-venv='. ./.venv/bin/activate'
 alias create-venv='python3 -m venv ./.venv'
 
+# Kubernetes aliases
+command -v kubectl >/dev/null &&
+alias k=kubectl
+
 # Podman aliases
 alias pcu='podman compose up'
 alias pcd='podman compose down'
