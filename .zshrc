@@ -16,6 +16,13 @@ fpath+=(
 	"$XDG_DATA_HOME"/zsh/plugins/*(N)
 )
 
+# Add fpath for Docker completions, if they exist
+docker_completions=~/.docker/completions
+if [ -d "$docker_completions" ]
+then
+	fpath+=("$docker_completions")
+fi
+
 # Emacs keys
 bindkey -e
 
