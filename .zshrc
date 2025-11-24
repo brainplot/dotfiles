@@ -110,7 +110,10 @@ bindkey "^X^E" edit-command-line
 autoload -Uz promptinit && promptinit
 
 # Custom theme
-prompt pure
+[ -f "$HOMEBREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme" ] &&
+. "$HOMEBREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme" &&
+[ -f ~/.p10k.zsh ] &&
+source ~/.p10k.zsh
 
 # Plugins
 source_plugin() { [ -e "$XDG_DATA_HOME"/zsh/plugins/"$1" ] && . "$XDG_DATA_HOME"/zsh/plugins/"$1" ; }
