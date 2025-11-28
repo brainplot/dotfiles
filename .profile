@@ -73,6 +73,9 @@ PATH="$XDG_DATA_HOME/node_modules/bin:$PATH"
 # Set user-wide paths to binaries
 PATH="$HOME/.local/bin:$PATH"
 
+# Disable telemetry for the AWS SAM CLI
+export SAM_CLI_TELEMETRY=0
+
 # Cleanup
 unset platform
 unset cpu_count
