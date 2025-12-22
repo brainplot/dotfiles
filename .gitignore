@@ -145,3 +145,6 @@ _*
 
 # VNC Client
 /.vnc/
+
+# AWS SAM CLI
+/.aws-sam/
