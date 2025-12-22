@@ -41,6 +41,8 @@
 	dc = diff --cached
 	psf = push --force-with-lease --force-if-includes
 	fp = fetch --prune
+	feat = "!feat() { git switch -c feature/\"$1\" ; } ; feat"
+	fix = "!fix() { git switch -c fix/\"$1\" ; } ; fix"
 [pull]
 	rebase = true
 [pretty]
