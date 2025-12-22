@@ -40,6 +40,7 @@
 	s = status
 	dc = diff --cached
 	psf = push --force-with-lease --force-if-includes
+	fp = fetch --prune
 [pull]
 	rebase = true
 [pretty]
