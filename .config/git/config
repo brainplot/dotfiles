@@ -31,7 +31,7 @@
 	update-file = "!update_file() { git commit -m \"Update \\`$1\\`\" ; } ; update_file"
 	sm = switch main
 	md = merge dev
-	sd = switch dev
+	sd = switch develop
 	a = add
 	c = commit
 	d = diff
