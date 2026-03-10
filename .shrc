@@ -101,3 +101,8 @@ load_dotenv() { export $(sed -e '/^[[:space:]]*#/d;/^$/d' "${1:-.env}" | paste -
 
 show_crt() { openssl x509 -text -noout -in "$1" | less ; }
 show_csr() { openssl req -text -noout -in "$1" | less ; }
+
+# SSH Agent set-up
+[ -z "$SSH_CONNECTION" ] &&
+[ -S "$XDG_RUNTIME_DIR/ssh-agent.socket" ] &&
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
