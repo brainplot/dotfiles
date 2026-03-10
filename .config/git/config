@@ -1,7 +1,7 @@
 [user]
 	name = Gianluca Recchia
 	email = contact@brainplot.io
-	signingkey = BB49BF8818271BFF1B900D42940BFCEFD4A47508
+	signingkey = 743FCD10
 [commit]
 	gpgsign = true
 	verbose = true
