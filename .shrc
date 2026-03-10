@@ -27,6 +27,9 @@ then
 	esac
 fi
 
+# Shell config
+HISTSIZE=10000
+
 # Environment variables
 
 # Misc aliases
