@@ -53,6 +53,9 @@ _*
 /.claude/
 /.local/share/claude/
 
+# CUPS
+/.cups/
+
 # Misc
 /.wget-hsts
 /.nvimlog
