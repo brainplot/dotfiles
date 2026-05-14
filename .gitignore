@@ -48,6 +48,11 @@ _*
 # Docker
 /.docker/
 
+# Claude
+/.claude.json
+/.claude/
+/.local/share/claude/
+
 # Misc
 /.wget-hsts
 /.nvimlog
