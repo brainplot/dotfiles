@@ -31,6 +31,7 @@ fi
 HISTSIZE=10000
 
 # Environment variables
+export FZF_ALT_C_COMMAND='fd --type d --strip-cwd-prefix --hidden --follow --exclude .git'
 
 # Misc aliases
 alias la='ls -lhA'
