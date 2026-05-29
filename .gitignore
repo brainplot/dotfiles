@@ -98,6 +98,7 @@ _*
 /.local/sessionmanagerplugin/
 /.local/share/cargo/*
 /.local/share/containers/
+/.local/share/direnv/
 /.local/share/fzf/
 /.local/share/gem/
 /.local/share/go/
