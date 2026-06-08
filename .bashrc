@@ -58,9 +58,11 @@ then
 	__git_complete dot __git_main
 fi
 
-# fzf keybindings
-[ -e ~/.local/share/fzf/completion.bash ] && . ~/.local/share/fzf/completion.bash
-[ -e ~/.local/share/fzf/key-bindings.bash ] && . ~/.local/share/fzf/key-bindings.bash
+# fzf shell integration
+if command -v fzf >/dev/null
+then
+	. <(fzf --bash)
+fi
 
 # HashiCorp tools
 for hashicorp_tool in terraform vault packer
