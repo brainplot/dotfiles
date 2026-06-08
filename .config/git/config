@@ -69,3 +69,5 @@
 	autocorrect = prompt
 [fetch]
 	prune = true
+[advice]
+	addEmptyPathspec = false
