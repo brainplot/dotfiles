@@ -76,6 +76,10 @@ _*
 /.gnupg/*
 !/.gnupg/gpg-agent.conf
 
+# GitHub CLI
+/.config/gh/*
+!/.config/gh/config.yaml
+
 # Ignore user binaries
 /.local/bin/
 
