@@ -161,3 +161,107 @@ _*
 
 # AWS SAM CLI
 /.aws-sam/
+
+# KDE / Plasma / Qt
+# QtProject* covers both QtProject.conf and QtProject/
+.config/QtProject*
+.config/Trolltech.conf
+# KDE/ (uppercase) is distinct from kde* on a case-sensitive filesystem
+.config/KDE/
+# kde* covers kdeglobals, kded5rc, kdeconnect/, kdedefaults/, kde.org/
+.config/kde*
+# k*rc covers the large family of k-prefixed rc files
+.config/k*rc
+.config/konsolesshconfig
+.config/krecentconnections
+.config/kwinoutputconfig.json
+# plasma* covers plasma-nm, plasmarc, plasmashellrc, plasma-org.kde.*, etc.
+.config/plasma*
+.config/baloofileinformationrc
+.config/bluedevilglobalrc
+.config/breezerc
+.config/dolphinrc
+.config/filetypesrc
+.config/gwenviewrc
+.config/haruna/
+.config/menus/
+# power* covers powerdevilrc and powermanagementprofilesrc
+.config/power*
+.config/spectaclerc
+.config/systemmonitorrc
+.config/trashrc
+.local/share/gwenview/
+.local/share/haruna/
+.local/share/kactivitymanagerd/
+.local/share/klipper/
+.local/share/konsole/
+.local/share/krunnerstaterc
+.local/share/kwalletd/
+.local/share/plasma-systemmonitor/
+.local/share/qtposition-geoclue2
+.local/share/sddm/
+# user-places.xbel* covers the file, .bak, and .tbcache
+.local/share/user-places.xbel*
+
+# GTK / GNOME
+# gtk* covers gtk-3.0/, gtk-4.0/, gtkrc, and gtkrc-2.0
+.config/gtk*
+.config/dconf/
+.config/xsettingsd/
+
+# Fonts
+.config/fontconfig/
+.local/share/fonts/
+
+# Go development
+.config/go/
+.config/dlv/
+
+# Browsers & email
+.mozilla/
+.thunderbird/
+
+# Media & entertainment
+.config/mpv/input.conf
+.config/mpv/script-opts/
+.config/mpv/scripts/
+.config/mpv/shaders/
+.config/spotify/
+.local/share/spotify-launcher/
+.local/share/TelegramDesktop/
+
+# System & XDG infrastructure
+.config/libaccounts-glib/
+.config/mimeapps.list
+.config/pulse/
+.config/session/
+.config/speech-dispatcher/
+.config/systemd/
+.config/user-dirs.dirs
+.config/user-dirs.locale
+.config/xdg-desktop-portal/
+.local/share/applications/
+.local/share/flatpak/
+.local/share/recently-used.xbel
+.local/share/Trash/
+
+# Applications
+.config/keepassxc/
+.config/qBittorrent/
+.local/share/qBittorrent/
+.config/uhk-agent/
+.config/vim/
+.config/Zeal/
+.local/share/zeal/
+.local/share/zed/
+
+# Networking & DevOps
+.config/dagger/
+.local/share/dagger/
+.local/share/MikroTik/
+.mitmproxy/
+.talos/
+
+# Security & private data
+.pki/
+.private/
