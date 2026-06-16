@@ -44,6 +44,7 @@
 	feat = "!feat() { git switch -c feature/\"$1\" ; } ; feat"
 	fix = "!fix() { git switch -c fix/\"$1\" ; } ; fix"
 	mm = merge --no-ff --no-edit
+	unadd = restore --staged
 [pull]
 	rebase = true
 [pretty]
