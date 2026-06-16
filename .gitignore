@@ -3,265 +3,246 @@
 !/LICENSE
 !/README.md
 
-# Ignore anything but ~/.ssh/config
+# SSH
 /.ssh/*
 !/.ssh/config
+
+# GNUPG
+/.gnupg/*
+!/.gnupg/gpg-agent.conf
+
+# Password store (its own repo)
+/.password-store/
 
 # Zsh
 /.zcomp*
 /.zsh_sessions/
 /.local/share/zsh/plugins/
+/.p10k.zsh
+/.z
+
+# History files
+.*_history
 
 # Completion scripts
 _*
 
-# Ignore .password-store since it's its own repo
-/.password-store/
+# KDE / Plasma / Qt
+# QtProject* covers both QtProject.conf and QtProject/
+/.config/QtProject*
+/.config/Trolltech.conf
+# KDE/ (uppercase) is distinct from kde* on a case-sensitive filesystem
+/.config/KDE/
+# kde* covers kdeglobals, kded5rc, kdeconnect/, kdedefaults/, kde.org/
+/.config/kde*
+# k*rc covers the large family of k-prefixed rc files
+/.config/k*rc
+/.config/konsolesshconfig
+/.config/krecentconnections
+/.config/kwinoutputconfig.json
+# plasma* covers plasma-nm, plasmarc, plasmashellrc, plasma-org.kde.*, etc.
+/.config/plasma*
+/.config/baloofileinformationrc
+/.config/bluedevilglobalrc
+/.config/breezerc
+/.config/dolphinrc
+/.config/filetypesrc
+/.config/gwenviewrc
+/.config/haruna/
+/.config/menus/
+# power* covers powerdevilrc and powermanagementprofilesrc
+/.config/power*
+/.config/spectaclerc
+/.config/systemmonitorrc
+/.config/trashrc
+/.local/share/gwenview/
+/.local/share/haruna/
+/.local/share/kactivitymanagerd/
+/.local/share/klipper/
+/.local/share/konsole/
+/.local/share/krunnerstaterc
+/.local/share/kwalletd/
+/.local/share/plasma-systemmonitor/
+/.local/share/qtposition-geoclue2
+/.local/share/sddm/
+# user-places.xbel* covers the file, .bak, and .tbcache
+/.local/share/user-places.xbel*
 
-# Ignore misc src folder
-/.local/share/src/
+# GTK / GNOME
+# gtk* covers gtk-3.0/, gtk-4.0/, gtkrc, and gtkrc-2.0 (in both ~ and ~/.config/)
+/.gtkrc-2.0
+/.config/gtk*
+/.config/dconf/
+/.config/xsettingsd/
 
-# Ignore local CA folder
+# Fonts
+/.fonts.conf
+/.config/fontconfig/
+/.local/share/fonts/
+
+# Editors — Vim
+# .vim* covers .vim/, .viminfo, and .vimrc
+/.vim*
+/.config/vim/
+
+# Editors — Neovim
+/.nvimlog
+/.config/nvim/
+/.local/share/nvim/
+
+# Editors — VS Code
+/.vscode/
+/.config/Code/
+/.config/github-copilot/
+
+# Editors — Zed
+/.config/zed/
+/.local/share/zed/
+
+# Go
+/.config/go/
+/.config/dlv/
+/.local/share/go/
+
+# Rust
+/.local/share/cargo/*
+!/.local/share/cargo/config.toml
+/.local/share/rustup/
+
+# Ruby
+/.bundle/
+/.gem/
+/.local/share/gem/
+
+# Python
+/.local/pipx/
+/.local/share/pyenv/
+
+# Node.js
+/.local/share/node_modules/
+
+# Java / JVM
+/.gradle/
+/.local/share/gradle/
+/.m2/
+
+# DevOps & cloud — containers & orchestration
+/.docker/
+/.local/share/containers/
+/.kube
+/.talos/
+
+# DevOps & cloud — HashiCorp
+/.terraform.d/
+/.vault-token
+/.config/helm/
+/.config/packer/
+
+# DevOps & cloud — Dagger
+/.config/dagger/
+/.local/share/dagger/
+
+# DevOps & cloud — AWS
+/.aws
+/.aws-sam/
+/.local/sessionmanagerplugin/
+
+# DevOps & cloud — Azure
+/.azure
+
+# Networking — Cisco / AnyConnect
+/.anyconnect
+/.cisco/
+
+# Networking — VPN
+/.vpn/
+
+# Networking — mitmproxy
+/.mitmproxy/
+
+# Networking — MikroTik
+/.local/share/MikroTik/
+
+# Networking — Wireshark
+/.config/wireshark/
+
+# Browsers & email
+/.mozilla/
+/.thunderbird/
+
+# Media & entertainment
+/.config/mpv/input.conf
+/.config/mpv/script-opts/
+/.config/mpv/scripts/
+/.config/mpv/shaders/
+/.config/spotify/
+/.local/share/spotify-launcher/
+/.local/share/TelegramDesktop/
+
+# Applications
+/.claude*
+/.local/share/claude/
+/.config/keepassxc/
+/.config/qBittorrent/
+/.local/share/qBittorrent/
+/.config/uhk-agent/
+/.config/Zeal/
+/.local/share/zeal/
+/.irssi/
+/.lldb/
+/.config/htop/
+/.local/share/direnv/
+/.local/share/fzf/
+/.local/share/mkcert/
+/.local/share/tmux/
+# GitHub CLI
+/.config/gh/*
+!/.config/gh/config.yaml
+# .vt.* covers .vt.toml and .vt.relationships.cache
+/.vt.*
+
+# System & XDG infrastructure
+/.config/libaccounts-glib/
+/.config/mimeapps.list
+/.config/pulse/
+/.config/session/
+/.config/speech-dispatcher/
+/.config/systemd/
+/.config/user-dirs.dirs
+/.config/user-dirs.locale
+/.config/xdg-desktop-portal/
+/.local/share/applications/
+/.local/share/flatpak/
+/.local/share/recently-used.xbel
+/.local/share/Trash/
+
+# Security & private data
+/.pki/
+/.private/
 /.local/share/ssl/
 
-# History files
-.*_history
+# User binaries
+/.local/bin/
 
 # WSL artifacts
 /.hushlogin
 /.motd_shown
 /.sudo_as_admin_successful
 
-# Vim
-/.vim
-/.viminfo
-/.vimrc
-
-# Ignore ~/.git-prompt.sh and ~/.git-completion.bash symlinks
-/.git-prompt.sh
-/.git-completion.bash
-
-# Cloud platforms config data (created by Docker for Windows)
-/.aws
-/.azure
-
-# Docker
-/.docker/
-
-# Claude
-/.claude.json
-/.claude/
-/.local/share/claude/
-
-# CUPS
-/.cups/
-
-# Misc
-/.wget-hsts
-/.nvimlog
-/.Xauthority
-/.gtkrc-2.0
-/.fonts.conf
-
-# Ignore cache directory
-/.cache
-
-# Ignore Kubernetes data
-/.kube
-
-# Ignore dotfiles Git repo
-/.dotfiles.git
-
-# GNUPG
-/.gnupg/*
-!/.gnupg/gpg-agent.conf
-
-# GitHub CLI
-/.config/gh/*
-!/.config/gh/config.yaml
-
-# Ignore user binaries
-/.local/bin/
-
-# Ignored config
-!/.local/share/cargo/config.toml
-/.anyconnect
-/.bundle/
-/.cisco/
-/.config/Code/
-/.config/github-copilot/
-/.config/helm/
-/.config/htop/
-/.config/iterm2/
-/.config/nvim/
-/.config/packer/
-/.config/wireshark/
-/.config/zed/
-/.gem/
-/.local/pipx/
-/.local/sessionmanagerplugin/
-/.local/share/cargo/*
-/.local/share/containers/
-/.local/share/direnv/
-/.local/share/fzf/
-/.local/share/gem/
-/.local/share/go/
-/.local/share/mkcert/
-/.local/share/node_modules/
-/.local/share/nvim/
-/.local/share/pyenv/
-/.local/share/rustup/
-/.local/share/tmux/
-/.terraform.d/
-
-# State folder
-/.local/state/
-
-# Powerlevel10k config
-/.p10k.zsh
-
-# HashiCorp Vault token
-/.vault-token
-
-# zsh-z
-/.z
-
-# irssi folder
-/.irssi/
-
-# VSCode folder
-/.vscode/
-
-# Virus Total CLI
-/.vt.relationships.cache
-/.vt.toml
-
-# Gradle
-/.local/share/gradle/
-/.gradle/
-
-# Maven
-/.m2/
-
-# LLDB
-/.lldb/
-
-# WireGuard
-/.vpn/
-
-# MacOS
+# macOS artifacts
 /.CFUserTextEncoding
 /.Trash/
+/.config/iterm2/
 
-# Terminfo database
+# Misc
+/.cache
+/.local/state/
+/.cups/
+/.wget-hsts
+/.Xauthority
 /.terminfo/
-
-# VNC Client
 /.vnc/
-
-# AWS SAM CLI
-/.aws-sam/
-
-# KDE / Plasma / Qt
-# QtProject* covers both QtProject.conf and QtProject/
-.config/QtProject*
-.config/Trolltech.conf
-# KDE/ (uppercase) is distinct from kde* on a case-sensitive filesystem
-.config/KDE/
-# kde* covers kdeglobals, kded5rc, kdeconnect/, kdedefaults/, kde.org/
-.config/kde*
-# k*rc covers the large family of k-prefixed rc files
-.config/k*rc
-.config/konsolesshconfig
-.config/krecentconnections
-.config/kwinoutputconfig.json
-# plasma* covers plasma-nm, plasmarc, plasmashellrc, plasma-org.kde.*, etc.
-.config/plasma*
-.config/baloofileinformationrc
-.config/bluedevilglobalrc
-.config/breezerc
-.config/dolphinrc
-.config/filetypesrc
-.config/gwenviewrc
-.config/haruna/
-.config/menus/
-# power* covers powerdevilrc and powermanagementprofilesrc
-.config/power*
-.config/spectaclerc
-.config/systemmonitorrc
-.config/trashrc
-.local/share/gwenview/
-.local/share/haruna/
-.local/share/kactivitymanagerd/
-.local/share/klipper/
-.local/share/konsole/
-.local/share/krunnerstaterc
-.local/share/kwalletd/
-.local/share/plasma-systemmonitor/
-.local/share/qtposition-geoclue2
-.local/share/sddm/
-# user-places.xbel* covers the file, .bak, and .tbcache
-.local/share/user-places.xbel*
-
-# GTK / GNOME
-# gtk* covers gtk-3.0/, gtk-4.0/, gtkrc, and gtkrc-2.0
-.config/gtk*
-.config/dconf/
-.config/xsettingsd/
-
-# Fonts
-.config/fontconfig/
-.local/share/fonts/
-
-# Go development
-.config/go/
-.config/dlv/
-
-# Browsers & email
-.mozilla/
-.thunderbird/
-
-# Media & entertainment
-.config/mpv/input.conf
-.config/mpv/script-opts/
-.config/mpv/scripts/
-.config/mpv/shaders/
-.config/spotify/
-.local/share/spotify-launcher/
-.local/share/TelegramDesktop/
-
-# System & XDG infrastructure
-.config/libaccounts-glib/
-.config/mimeapps.list
-.config/pulse/
-.config/session/
-.config/speech-dispatcher/
-.config/systemd/
-.config/user-dirs.dirs
-.config/user-dirs.locale
-.config/xdg-desktop-portal/
-.local/share/applications/
-.local/share/flatpak/
-.local/share/recently-used.xbel
-.local/share/Trash/
-
-# Applications
-.config/keepassxc/
-.config/qBittorrent/
-.local/share/qBittorrent/
-.config/uhk-agent/
-.config/vim/
-.config/Zeal/
-.local/share/zeal/
-.local/share/zed/
-
-# Networking & DevOps
-.config/dagger/
-.local/share/dagger/
-.local/share/MikroTik/
-.mitmproxy/
-.talos/
-
-# Security & private data
-.pki/
-.private/
+/.local/share/src/
+/.git-prompt.sh
+/.git-completion.bash
+/.dotfiles.git
