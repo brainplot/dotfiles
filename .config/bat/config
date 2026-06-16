@@ -1,8 +1,5 @@
 #!/hint/sh
 
-# Don't draw any additional decoration
---plain
-
 # Set the theme
 --theme=1337
 
