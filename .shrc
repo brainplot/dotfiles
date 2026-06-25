@@ -39,6 +39,7 @@ alias ll='ls -lh'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias tree="tree -I '.git|.hg|.svn'"
+alias root='cd "$(git rev-parse --show-toplevel)"'
 command -v batcat >/dev/null && alias bat=batcat
 
 # Neovim aliases
